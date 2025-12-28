@@ -51,7 +51,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-4 px-4 text-sm leading-3 font-semibold lg:gap-10">
             {footerItems.map((item, i) => (
-              <span key={i}>{item}</span>
+              <span key={i} className="hover:cursor-pointer">
+                {item}
+              </span>
             ))}
           </div>
           <div className="flex gap-3">
