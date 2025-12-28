@@ -37,7 +37,7 @@ const Footer = () => {
                 height="59"
                 viewBox="0 0 210 59"
                 fill="none"
-                className="h-7 w-24"
+                className="h-7 w-24 hover:cursor-pointer"
               >
                 <title>Dribbble: the community for graphic design</title>
                 <path
@@ -55,31 +55,37 @@ const Footer = () => {
             ))}
           </div>
           <div className="flex gap-3">
-            <span>
-              <FaXTwitter className="h-5 w-5" />
+            <span className="">
+              <FaXTwitter className="h-5 w-5 hover:cursor-pointer" />
             </span>
             <span>
-              <FaFacebook className="h-5 w-5" />
+              <FaFacebook className="h-5 w-5 hover:cursor-pointer" />
             </span>
             <span>
-              <FaInstagram className="h-5 w-5" />
+              <FaInstagram className="h-5 w-5 hover:cursor-pointer" />
             </span>
             <span>
-              <SiPicsart className="h-5 w-5" />
+              <SiPicsart className="h-5 w-5 hover:cursor-pointer" />
             </span>
           </div>
         </div>
         <div className="mt-20 flex flex-col items-center justify-center gap-3 px-5 pb-10 md:flex-row md:justify-between lg:px-15 xl:px-30">
           <div className="flex justify-center gap-4">
             {footerYears.map((year, y) => (
-              <span key={y} className="text-sm font-medium text-gray-500">
+              <span
+                key={y}
+                className={`text-sm ${y > 0 ? "hover:cursor-pointer" : ""} font-medium text-gray-500`}
+              >
                 {year}
               </span>
             ))}
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {footerTags.map((tag, i) => (
-              <span key={i} className="text-sm font-medium text-gray-500">
+              <span
+                key={i}
+                className="text-sm font-medium text-gray-500 hover:cursor-pointer"
+              >
                 {tag}
               </span>
             ))}
