@@ -116,7 +116,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="mt-5 flex items-center gap-28 px-3 min-[1200px]:px-12">
+      <div className="mt-20 flex items-center gap-28 px-3 min-[1200px]:px-12 md:mt-25">
         <div className="flex w-full flex-col px-4 xl:w-2/4">
           <div className="flex flex-col items-center md:items-start">
             <h1 className="text-center text-4xl leading-9 font-semibold tracking-tight md:text-start md:text-5xl md:leading-13">

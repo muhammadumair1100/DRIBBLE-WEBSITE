@@ -1,11 +1,23 @@
 import React from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { CiSearch } from "react-icons/ci";
+
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  function handleScroll() {
+    if (window.scrollY > 300) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }
+  window.addEventListener("scroll", handleScroll);
+  console.log(isScrolled);
   const menuItems = [
     "Explore",
     "Hire Talent",
@@ -54,8 +66,12 @@ const Navbar = () => {
   return (
     <AnimatePresence>
       <div>
-        <div className="flex items-center justify-between px-4 py-2 md:px-8 md:py-6">
-          <div className="flex items-center gap-4 min-[1200px]:gap-15">
+        <div
+          className={`flex ${isScrolled ? "fixed z-100 " : ""} absolute top-0 left-0 w-full items-center justify-between gap-15 bg-white px-4 py-4 md:px-8 md:py-4`}
+        >
+          <div
+            className={`flex items-center md:min-w-8/12 ${isScrolled ? "min-[1200px]:gap-8" : "min-[1200px]:gap-15"} gap-4`}
+          >
             <span className="min-[1200px]:hidden">
               <div
                 onClick={() => setMenuToggle(!menuToggle)}
@@ -104,32 +120,20 @@ const Navbar = () => {
               </svg>
             </span>
 
-            <motion.div
-              variants={parentAnimate}
-              animate={menuToggle ? "open" : "closed"}
-              className="sm:hidde absolute inset-0 top-15 left-0 h-80 border-t border-black/10 bg-white px-8 py-4 shadow-md"
-            >
-              {menuItems.map((item, idx) => (
-                <motion.div
-                  variants={childAnimate}
-                  key={idx}
-                  className="flex items-center gap-1 py-3"
-                >
-                  <span
-                    className={`text-lg ${item === "Start a Project Brief" && "text-pink-500"} font-bold`}
-                  >
-                    {item}
-                  </span>
-                  <span>
-                    <MdOutlineKeyboardArrowDown
-                      className={`h-5 w-5 ${item === "Start a Project Brief" && "hidden"}`}
-                    />
-                  </span>
-                </motion.div>
-              ))}
-            </motion.div>
+            {isScrolled && (
+              <div className="hidden w-full items-center justify-between rounded-full bg-gray-100 px-2 py-2 md:flex">
+                <input
+                  type="text"
+                  placeholder="What are you look for?"
+                  className="w-full pl-2 text-xs font-medium text-black placeholder:text-black focus:outline-none"
+                />
+                <span className="rounded-full bg-pink-500/80 p-2.5 hover:cursor-pointer hover:bg-pink-400">
+                  <CiSearch className="h-5 w-5 text-white" />
+                </span>
+              </div>
+            )}
 
-            <div className="hidden gap-5 min-[1200px]:flex">
+            <div className="hidden gap-5 whitespace-nowrap min-[1200px]:flex">
               {menuItems.map((item, idx) => (
                 <span
                   key={idx}
@@ -141,6 +145,31 @@ const Navbar = () => {
               ))}
             </div>
           </div>
+          <motion.div
+            variants={parentAnimate}
+            animate={menuToggle ? "open" : "closed"}
+            className="absolute inset-0 top-15 left-0 h-80 border-t border-black/10 bg-white px-8 py-4 shadow-md min-[1200px]:hidden md:top-21"
+          >
+            {menuItems.map((item, idx) => (
+              <motion.div
+                variants={childAnimate}
+                key={idx}
+                className="flex items-center gap-1 py-3"
+              >
+                <span
+                  className={`text-lg ${item === "Start a Project Brief" && "text-pink-500"} font-bold`}
+                >
+                  {item}
+                </span>
+                <span>
+                  <MdOutlineKeyboardArrowDown
+                    className={`h-5 w-5 ${item === "Start a Project Brief" && "hidden"}`}
+                  />
+                </span>
+              </motion.div>
+            ))}
+          </motion.div>
+
           <div className="flex gap-5">
             <button className="hidden text-sm font-semibold text-black md:block">
               Sign up
