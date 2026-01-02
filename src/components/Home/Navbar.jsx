@@ -1,23 +1,40 @@
 import React from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
+import BadgeOne from "./NavbarMenuBadges/BadgeOne";
+import BadgeTwo from "./NavbarMenuBadges/BadgeTwo";
+import BadgeThree from "./NavbarMenuBadges/BadgeThree";
+import BadgeFour from "./NavbarMenuBadges/BadgeFour";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeBadge, setActiveBadge] = useState(null);
+
+  const body = document.querySelector("body");
+
+  useEffect(() => {
+    if (menuToggle) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuToggle]);
 
   function handleScroll() {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 400) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
     }
   }
   window.addEventListener("scroll", handleScroll);
-  console.log(isScrolled);
   const menuItems = [
     "Explore",
     "Hire Talent",
@@ -67,12 +84,12 @@ const Navbar = () => {
     <AnimatePresence>
       <div>
         <div
-          className={`flex ${isScrolled ? "fixed z-100 " : ""} absolute top-0 left-0 w-full items-center justify-between gap-15 bg-white px-4 py-4 md:px-8 md:py-4`}
+          className={`flex ${isScrolled ? "fixed " : "absolute"} top-0 left-0 z-100 w-full items-center justify-between gap-15 bg-white px-4 py-4 md:px-8 md:py-4`}
         >
           <div
             className={`flex items-center md:min-w-8/12 ${isScrolled ? "min-[1200px]:gap-8" : "min-[1200px]:gap-15"} gap-4`}
           >
-            <span className="min-[1200px]:hidden">
+            <span className="p-1 hover:cursor-pointer min-[1200px]:hidden">
               <div
                 onClick={() => setMenuToggle(!menuToggle)}
                 className="flex flex-col gap-1"
@@ -133,39 +150,75 @@ const Navbar = () => {
               </div>
             )}
 
+            {/* Laptop screen items  */}
             <div className="hidden gap-5 whitespace-nowrap min-[1200px]:flex">
-              {menuItems.map((item, idx) => (
-                <span
-                  key={idx}
-                  className={`${item === "Start a Project Brief" && "hidden"} flex items-center gap-1 text-sm font-semibold`}
+              {menuItems.map((item, index) => (
+                <div
+                  onMouseEnter={() => setActiveBadge(index)}
+                  onMouseLeave={() => setActiveBadge(null)}
+                  key={index}
+                  className={`${item === "Start a Project Brief" && "hidden"} flex items-center gap-1 text-sm font-semibold hover:cursor-pointer hover:text-neutral-500`}
                 >
                   {item}
                   <MdOutlineKeyboardArrowDown className="h-5 w-5" />
-                </span>
+
+                  <AnimatePresence>
+                    {activeBadge === index && (
+                      <div className="absolute top-0 items-center min-[1200px]:top-15 min-[1200px]:px-5">
+                        {index === 0 && <BadgeOne />}
+                        {index === 1 && <BadgeTwo />}
+                        {index === 2 && <BadgeThree />}
+                        {index === 3 && <BadgeFour />}
+                      </div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
             </div>
           </div>
+
+          {/* Mobile screen items  */}
           <motion.div
             variants={parentAnimate}
             animate={menuToggle ? "open" : "closed"}
-            className="absolute inset-0 top-15 left-0 h-80 border-t border-black/10 bg-white px-8 py-4 shadow-md min-[1200px]:hidden md:top-21"
+            className="absolute top-15 left-0 z-100 max-h-[calc(100vh-64px)] w-full overflow-y-auto border-t-2 border-black/10 bg-white px-8 py-4 shadow-md min-[1200px]:hidden md:top-21"
           >
             {menuItems.map((item, idx) => (
               <motion.div
                 variants={childAnimate}
                 key={idx}
-                className="flex items-center gap-1 py-3"
+                className="gap-1 overflow-y-hidden py-3"
               >
-                <span
-                  className={`text-lg ${item === "Start a Project Brief" && "text-pink-500"} font-bold`}
+                <div
+                  onClick={() =>
+                    setActiveBadge(activeBadge === idx ? null : idx)
+                  }
+                  className="relative items-center"
                 >
-                  {item}
-                </span>
-                <span>
-                  <MdOutlineKeyboardArrowDown
-                    className={`h-5 w-5 ${item === "Start a Project Brief" && "hidden"}`}
-                  />
-                </span>
+                  <span
+                    className={`flex items-center text-lg hover:cursor-pointer hover:text-gray-500 ${item === "Start a Project Brief" && "text-pink-500"} font-bold`}
+                  >
+                    {item}
+                    <motion.span
+                      initial={{ rotate: 0 }}
+                      animate={{ rotate: activeBadge === idx ? 180 : 0 }}
+                    >
+                      <MdOutlineKeyboardArrowDown
+                        className={`h-5 w-5 ${item === "Start a Project Brief" && "hidden"}`}
+                      />
+                    </motion.span>
+                  </span>
+                  <AnimatePresence>
+                    {activeBadge === idx && (
+                      <div className="relative top-0">
+                        {idx === 0 && <BadgeOne />}
+                        {idx === 1 && <BadgeTwo />}
+                        {idx === 2 && <BadgeThree />}
+                        {idx === 3 && <BadgeFour />}
+                      </div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </motion.div>
             ))}
           </motion.div>
