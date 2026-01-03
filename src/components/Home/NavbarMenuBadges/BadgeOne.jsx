@@ -10,7 +10,7 @@ const BadgeOne = () => {
         animate={{ height: "auto", opacity: 1 }}
         exit={{ height: 0, opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="z-1500 overflow-hidden bg-white"
+        className="overflow-hidden bg-white min-[1200px]:rounded-lg min-[1200px]:px-7 min-[1200px]:pb-5 min-[1200px]:shadow-xl"
       >
         <div className="relative">
           <div className="flex flex-col gap-8 py-6">
@@ -25,7 +25,7 @@ const BadgeOne = () => {
               </span>
             </div>
           </div>
-          <div className="h-[0.5px] w-[30%] bg-neutral-300"></div>
+          <div className="h-[0.5px] w-[30%] bg-neutral-300 min-[1200px]:w-full"></div>
         </div>
         <Products key={1} />
       </motion.div>

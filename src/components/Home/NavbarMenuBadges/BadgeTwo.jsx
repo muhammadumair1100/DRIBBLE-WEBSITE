@@ -29,7 +29,7 @@ const BadgeTwo = ({ itemData, line1, line2, line3 }) => {
         animate={{ height: "auto", opacity: 1 }}
         exit={{ height: 0, opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="z-500 overflow-hidden bg-white"
+        className="overflow-hidden bg-white min-[1200px]:rounded-lg min-[1200px]:px-7 min-[1200px]:pb-5 min-[1200px]:shadow-2xl"
       >
         <div className="mt-7 flex flex-col gap-8">
           {(itemData || hireTalent).map((talent, index) => (
@@ -61,10 +61,10 @@ const BadgeTwo = ({ itemData, line1, line2, line3 }) => {
                 </p>
               )}
             </div>
-            <div className="h-[0.5px] w-[30%] bg-neutral-300"></div>
+            <div className="h-[0.5px] w-[30%] bg-neutral-300 min-[1200px]:w-full"></div>
             <div className="flex items-center gap-1">
               <IoBookOutline className="size-3.5" />
-              <span className="text-xs text-neutral-700">
+              <span className="text-xs text-neutral-700 hover:cursor-pointer hover:text-neutral-600 min-[1200px]:text-neutral-500">
                 {line3 || "Learn more about how hiring works on Dribbble"}
               </span>
               <HiArrowNarrowRight className="size-3 text-neutral-500" />

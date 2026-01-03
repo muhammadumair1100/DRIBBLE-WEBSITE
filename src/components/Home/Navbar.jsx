@@ -157,14 +157,14 @@ const Navbar = () => {
                   onMouseEnter={() => setActiveBadge(index)}
                   onMouseLeave={() => setActiveBadge(null)}
                   key={index}
-                  className={`${item === "Start a Project Brief" && "hidden"} flex items-center gap-1 text-sm font-semibold hover:cursor-pointer hover:text-neutral-500`}
+                  className={`${item === "Start a Project Brief" && "hidden"} relative flex items-center gap-1 text-sm font-semibold hover:cursor-pointer hover:text-neutral-500`}
                 >
                   {item}
                   <MdOutlineKeyboardArrowDown className="h-5 w-5" />
 
                   <AnimatePresence>
                     {activeBadge === index && (
-                      <div className="absolute top-0 items-center min-[1200px]:top-15 min-[1200px]:px-5">
+                      <div className="absolute top-0 items-center text-black min-[1200px]:top-8 min-[1200px]:-left-5">
                         {index === 0 && <BadgeOne />}
                         {index === 1 && <BadgeTwo />}
                         {index === 2 && <BadgeThree />}
