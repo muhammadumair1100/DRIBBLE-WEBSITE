@@ -27,6 +27,7 @@ const HomeCards = () => {
       const width = window.innerWidth;
 
       if (width >= 1280) {
+        setColumns(4);
       } else if (width >= 950) {
         setColumns(3);
       } else if (width >= 600) {
