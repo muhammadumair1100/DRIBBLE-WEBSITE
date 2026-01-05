@@ -31,9 +31,12 @@ const BadgeTwo = ({ itemData, line1, line2, line3 }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden bg-white min-[1200px]:rounded-lg min-[1200px]:px-7 min-[1200px]:pb-5 min-[1200px]:shadow-2xl"
       >
-        <div className="mt-7 flex flex-col gap-8">
+        <div className="mt-7 flex flex-col gap-8 min-[1200px]:gap-0">
           {(itemData || hireTalent).map((talent, index) => (
-            <div key={index} className="group flex gap-2 hover:cursor-pointer">
+            <div
+              key={index}
+              className="group flex gap-2 rounded-lg hover:cursor-pointer hover:bg-neutral-100 min-[1200px]:p-4"
+            >
               <div className="pt-0.5 group-hover:text-neutral-500">
                 {talent.icone}
               </div>

@@ -2,9 +2,14 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46045693/file/6c647f27e952e40df8eb8741691ff887.png?format=webp&resize=1200x900&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
     userImage:
       "https://cdn.dribbble.com/users/1057940/avatars/small/f068710cc8e5fcebcbcd8f1f75d1b4ef.gif?1732126488",
     title: "Nixtio",
+    location: "New York City, NY",
     premuim: "Team",
     liked: 9060,
     viewed: 24200,
@@ -14,9 +19,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046645/file/551fd871be84010d4652c0c26a257feb.png?format=webp&resize=1200x900&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
     userImage:
       "https://cdn.dribbble.com/users/4053754/avatars/small/55dd34a2285fa77014068c00427eee21.png?1729855991",
     title: "Phenomenon Studio",
+    location: "New York City, NY",
+
     premuim: "Team",
     liked: 3333,
     viewed: 6933,
@@ -26,9 +37,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046501/file/ee4d39a485acf0e88ef15d67ca03b4b5.png?format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
     userImage:
       "https://cdn.dribbble.com/users/4053754/avatars/small/55dd34a2285fa77014068c00427eee21.png?1729855991",
     title: "Phenomenon Studio",
+    location: "New York City, NY",
+
     premuim: "Team",
     liked: 85,
     viewed: 5800,
@@ -38,9 +55,17 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46040656/file/77708973440a8730772454ab88aabc43.png?format=webp&resize=1200x900&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/11502486/avatars/small/15f0c2b89bfef25f6fb574e053de97f3.png?1750758141",
     title: "Emote",
+    location: "New York City, NY",
+
     premuim: "Team",
     liked: 9222,
     viewed: 5600,
@@ -50,9 +75,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46045172/file/88c8e871df39fdeb0200dac4f3a13404.jpg?crop=0x0-4788x3599&format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/834691/avatars/small/c0329a5235306c5bca7037c6943eff68.png?1522921082",
     title: "RonDesignLab ⭐️",
+    location: "New York City, NY",
+
     premuim: "Team",
     liked: 9400,
     viewed: 6750,
@@ -62,9 +94,17 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/45953101/file/a231782a8ead912618b460e077c13280.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4949363/avatars/small/606bb85ee728fd3d78bbddf7e70b3901.jpg?1676454777",
     title: "Ronas IT | UI/UX Team",
+    location: "New York City, NY",
+
     premuim: "Team",
     liked: 9430,
     viewed: 23000,
@@ -74,9 +114,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46044059/file/377dc8edcd2e020aae96d3e0f3762841.png?crop=0x0-2486x1864&format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/1159000/avatars/small/57e16bba67abb850bd3d082c6cccd869.jpeg?1754478191",
     title: "Jenya Martynenko",
+    location: "New York City, NY",
+
     premuim: "Pro",
     liked: 9640,
     viewed: 6700,
@@ -86,8 +133,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46043836/file/cd330ccfd65818f5b685f64a9de89a1b.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/702789/avatars/small/62dc313bebbc78f08ffd3076b6228377.png?1646754829",
+    location: "New York City, NY",
     title: "Outcrowd",
     premuim: "Pro",
     liked: 9300,
@@ -98,8 +152,14 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042375/file/663ea1f9903a9b7d673cec9bdef9b593.jpg?crop=656x2-3573x2189&format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/5976/avatars/small/b386936f5bd2a840a64e23886f9e6f1d.jpg?1733293323",
+    location: "New York City, NY",
     title: "Alex Tass, logo designer",
     premuim: "Pro",
     liked: 9430,
@@ -110,8 +170,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042030/file/a3c3f099a90549bdefcae239e44d5c0c.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4626561/avatars/small/3e7a9cae12ddff5464716c73428efe8f.jpg?1631241699",
+    location: "New York City, NY",
     title: "Dipa Inhouse",
     premuim: "Team",
     liked: 2904,
@@ -122,8 +189,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046781/file/ada649d196246c3306330631c4e1ea35.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/127057/avatars/small/9aa05a0a1032448b8cf0fb07acbcecc7.png?1476347702",
+    location: "New York City, NY",
     title: "ForSureLetters",
     premuim: "Pro",
     liked: 7830,
@@ -134,8 +208,14 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46047719/file/faa7e1000d3863f54d64b7696dc4f140.png?format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/8732723/avatars/small/322dc3558346b9553d7b9b96dc883580.jpeg?1718031457",
+    location: "New York City, NY",
     title: "Fahema Yesmin",
     premuim: "Pro",
     liked: 9372,
@@ -146,8 +226,14 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46047985/file/d9fdbca68f85641308321151fe29a496.jpg?format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/userupload/46047985/file/d9fdbca68f85641308321151fe29a496.jpg?format=webp&resize=450x338&vertical=center",
+    location: "New York City, NY",
     title: "Visvibe™",
     premuim: "Pro",
     liked: 9734,
@@ -158,8 +244,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46043521/file/dc1dfedfbb96a28d2c720d3b9f3cce77.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/3614111/avatars/small/515a941892d2e03ff9acf4be045bb9dc.png?1737992536",
+    location: "New York City, NY",
     title: "Helen Jhones",
     premuim: "Pro",
     liked: 8293,
@@ -170,8 +263,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042916/file/aef8913fc6df371064ca61a97cc7c1e3.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/22735722/avatars/small/6128c1d7e284014a412059927caaf97e.png?1735151649   ",
+    location: "New York City, NY",
     title: "Opndoo Studio",
     premuim: "Team",
     liked: 2342,
@@ -182,11 +282,17 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042375/file/663ea1f9903a9b7d673cec9bdef9b593.jpg?crop=656x2-3573x2189&format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/5976/avatars/small/b386936f5bd2a840a64e23886f9e6f1d.jpg?1733293323",
     title: "Alex Tass, logo designer",
     premuim: "Pro",
     liked: 2342,
+    location: "New York City, NY",
     viewed: 26345,
     type: "image",
     heading: "Protera - Innovative BioTech Website Design",
@@ -194,11 +300,18 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042030/file/a3c3f099a90549bdefcae239e44d5c0c.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4626561/avatars/small/3e7a9cae12ddff5464716c73428efe8f.jpg?1631241699",
     title: "Dipa Inhouse",
     premuim: "Team",
     liked: 6162,
+    location: "New York City, NY",
     viewed: 2637,
     type: "image",
     heading: "Ho-ho-ho Merry Christmas, Folks!",
@@ -206,9 +319,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046781/file/ada649d196246c3306330631c4e1ea35.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/127057/avatars/small/9aa05a0a1032448b8cf0fb07acbcecc7.png?1476347702",
     title: "ForSureLetters",
+    location: "New York City, NY",
     premuim: "Pro",
     liked: 2616,
     viewed: 1636,
@@ -218,10 +338,17 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46045693/file/6c647f27e952e40df8eb8741691ff887.png?format=webp&resize=1200x900&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/1057940/avatars/small/f068710cc8e5fcebcbcd8f1f75d1b4ef.gif?1732126488",
     title: "Nixtio",
     premuim: "Team",
+    location: "New York City, NY",
     liked: 9060,
     viewed: 24200,
     type: "image",
@@ -230,8 +357,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046645/file/551fd871be84010d4652c0c26a257feb.png?format=webp&resize=1200x900&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4053754/avatars/small/55dd34a2285fa77014068c00427eee21.png?1729855991",
+    location: "New York City, NY",
     title: "Phenomenon Studio",
     premuim: "Team",
     liked: 3333,
@@ -242,10 +376,17 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046501/file/ee4d39a485acf0e88ef15d67ca03b4b5.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4053754/avatars/small/55dd34a2285fa77014068c00427eee21.png?1729855991",
     title: "Phenomenon Studio",
     premuim: "Team",
+    location: "New York City, NY",
     liked: 85,
     viewed: 5800,
     type: "image",
@@ -254,9 +395,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46040656/file/77708973440a8730772454ab88aabc43.png?format=webp&resize=1200x900&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/11502486/avatars/small/15f0c2b89bfef25f6fb574e053de97f3.png?1750758141",
     title: "Emote",
+    location: "New York City, NY",
     premuim: "Team",
     liked: 9222,
     viewed: 5600,
@@ -266,11 +414,18 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46045172/file/88c8e871df39fdeb0200dac4f3a13404.jpg?crop=0x0-4788x3599&format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/834691/avatars/small/c0329a5235306c5bca7037c6943eff68.png?1522921082",
     title: "RonDesignLab ⭐️",
     premuim: "Team",
     liked: 9400,
+    location: "New York City, NY",
     viewed: 6750,
     type: "image",
     heading: "World Time Tracking Mobile App UI",
@@ -278,9 +433,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/45953101/file/a231782a8ead912618b460e077c13280.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4949363/avatars/small/606bb85ee728fd3d78bbddf7e70b3901.jpg?1676454777",
     title: "Ronas IT | UI/UX Team",
+    location: "New York City, NY",
     premuim: "Team",
     liked: 9430,
     viewed: 23000,
@@ -290,9 +452,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46044059/file/377dc8edcd2e020aae96d3e0f3762841.png?crop=0x0-2486x1864&format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/1159000/avatars/small/57e16bba67abb850bd3d082c6cccd869.jpeg?1754478191",
     title: "Jenya Martynenko",
+    location: "New York City, NY",
     premuim: "Pro",
     liked: 9640,
     viewed: 6700,
@@ -302,10 +471,17 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46043836/file/cd330ccfd65818f5b685f64a9de89a1b.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/702789/avatars/small/62dc313bebbc78f08ffd3076b6228377.png?1646754829",
     title: "Outcrowd",
     premuim: "Pro",
+    location: "New York City, NY",
     liked: 9300,
     viewed: 5380,
     type: "image",
@@ -314,9 +490,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042375/file/663ea1f9903a9b7d673cec9bdef9b593.jpg?crop=656x2-3573x2189&format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/5976/avatars/small/b386936f5bd2a840a64e23886f9e6f1d.jpg?1733293323",
     title: "Alex Tass, logo designer",
+    location: "New York City, NY",
     premuim: "Pro",
     liked: 9430,
     viewed: 9830,
@@ -326,9 +509,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042030/file/a3c3f099a90549bdefcae239e44d5c0c.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4626561/avatars/small/3e7a9cae12ddff5464716c73428efe8f.jpg?1631241699",
     title: "Dipa Inhouse",
+    location: "New York City, NY",
     premuim: "Team",
     liked: 2904,
     viewed: 1407,
@@ -338,11 +528,18 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046781/file/ada649d196246c3306330631c4e1ea35.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/127057/avatars/small/9aa05a0a1032448b8cf0fb07acbcecc7.png?1476347702",
     title: "ForSureLetters",
     premuim: "Pro",
     liked: 7830,
+    location: "New York City, NY",
     viewed: 6827,
     type: "image",
     heading: "Logo Design Selection Q4 2025",
@@ -350,9 +547,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46047719/file/faa7e1000d3863f54d64b7696dc4f140.png?format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/8732723/avatars/small/322dc3558346b9553d7b9b96dc883580.jpeg?1718031457",
     title: "Fahema Yesmin",
+    location: "New York City, NY",
     premuim: "Pro",
     liked: 9372,
     viewed: 3273,
@@ -368,15 +571,23 @@ const cards = [
     premuim: "Pro",
     liked: 9734,
     viewed: 5829,
+    location: "New York City, NY",
     type: "image",
     heading: "Startup Brand Identity",
   },
   {
     image:
       "https://cdn.dribbble.com/userupload/46043521/file/dc1dfedfbb96a28d2c720d3b9f3cce77.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/3614111/avatars/small/515a941892d2e03ff9acf4be045bb9dc.png?1737992536",
     title: "Helen Jhones",
+    location: "New York City, NY",
     premuim: "Pro",
     liked: 8293,
     viewed: 2034,
@@ -386,11 +597,18 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042916/file/aef8913fc6df371064ca61a97cc7c1e3.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/22735722/avatars/small/6128c1d7e284014a412059927caaf97e.png?1735151649   ",
     title: "Opndoo Studio",
     premuim: "Team",
     liked: 2342,
+    location: "New York City, NY",
     viewed: 4922,
     type: "image",
     heading: "PEKA. Dj Logo",
@@ -398,8 +616,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042375/file/663ea1f9903a9b7d673cec9bdef9b593.jpg?crop=656x2-3573x2189&format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/5976/avatars/small/b386936f5bd2a840a64e23886f9e6f1d.jpg?1733293323",
+    location: "New York City, NY",
     title: "Alex Tass, logo designer",
     premuim: "Pro",
     liked: 2342,
@@ -410,9 +635,16 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46042030/file/a3c3f099a90549bdefcae239e44d5c0c.png?format=webp&resize=450x338&vertical=center",
+
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/4626561/avatars/small/3e7a9cae12ddff5464716c73428efe8f.jpg?1631241699",
     title: "Dipa Inhouse",
+    location: "New York City, NY",
     premuim: "Team",
     liked: 6162,
     viewed: 2637,
@@ -422,9 +654,15 @@ const cards = [
   {
     image:
       "https://cdn.dribbble.com/userupload/46046781/file/ada649d196246c3306330631c4e1ea35.png?format=webp&resize=450x338&vertical=center",
+    imageTwo:
+      "https://cdn.dribbble.com/userupload/46255223/file/still-ea54bf96b74d7b9524c4cb915f0b1e4e.png?resize=280x210",
+    imageThree:
+      "https://cdn.dribbble.com/userupload/46237843/file/still-928cc992874d49480f5473424c846574.png?resize=280x210",
+
     userImage:
       "https://cdn.dribbble.com/users/127057/avatars/small/9aa05a0a1032448b8cf0fb07acbcecc7.png?1476347702",
     title: "ForSureLetters",
+    location: "New York City, NY",
     premuim: "Pro",
     liked: 2616,
     viewed: 1636,

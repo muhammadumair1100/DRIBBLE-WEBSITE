@@ -155,7 +155,6 @@ const Navbar = () => {
               {menuItems.map((item, index) => (
                 <div
                   onMouseEnter={() => setActiveBadge(index)}
-                  onMouseLeave={() => setActiveBadge(null)}
                   key={index}
                   className={`${item === "Start a Project Brief" && "hidden"} relative flex items-center gap-1 text-sm font-semibold hover:cursor-pointer hover:text-neutral-500`}
                 >
@@ -164,7 +163,10 @@ const Navbar = () => {
 
                   <AnimatePresence>
                     {activeBadge === index && (
-                      <div className="absolute top-0 items-center text-black min-[1200px]:top-8 min-[1200px]:-left-5">
+                      <div
+                        onMouseLeave={() => setActiveBadge(null)}
+                        className="absolute top-0 items-center text-black min-[1200px]:top-8 min-[1200px]:-left-5"
+                      >
                         {index === 0 && <BadgeOne />}
                         {index === 1 && <BadgeTwo />}
                         {index === 2 && <BadgeThree />}
