@@ -5,11 +5,15 @@ import BadgeOne from "./NavbarMenuBadges/BadgeOne";
 import BadgeTwo from "./NavbarMenuBadges/BadgeTwo";
 import BadgeThree from "./NavbarMenuBadges/BadgeThree";
 import BadgeFour from "./NavbarMenuBadges/BadgeFour";
+import { useLocation } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
   const [menuToggle, setMenuToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeBadge, setActiveBadge] = useState(null);
@@ -64,6 +68,8 @@ const Navbar = () => {
     },
   };
 
+  console.log(location);
+
   const childAnimate = {
     open: {
       opacity: 1,
@@ -84,7 +90,7 @@ const Navbar = () => {
     <AnimatePresence>
       <div>
         <div
-          className={`flex ${isScrolled ? "fixed " : "absolute"} top-0 left-0 z-100 w-full items-center justify-between gap-15 bg-white px-4 py-4 md:px-8 md:py-4`}
+          className={`flex ${location.pathname === "/popular" && "fixed"} ${isScrolled ? "fixed" : "absolute"} top-0 left-0 z-100 w-full items-center justify-between gap-15 bg-white px-4 py-4 md:px-8 md:py-4`}
         >
           <div
             className={`flex items-center md:min-w-8/12 ${isScrolled ? "min-[1200px]:gap-8" : "min-[1200px]:gap-15"} gap-4`}
@@ -137,18 +143,18 @@ const Navbar = () => {
               </svg>
             </span>
 
-            {isScrolled && (
-              <div className="hidden w-full items-center justify-between rounded-full bg-gray-100 px-2 py-2 md:flex">
-                <input
-                  type="text"
-                  placeholder="What are you look for?"
-                  className="w-full pl-2 text-xs font-medium text-black placeholder:text-black focus:outline-none"
-                />
-                <span className="rounded-full bg-pink-500/80 p-2.5 hover:cursor-pointer hover:bg-pink-400">
-                  <CiSearch className="h-5 w-5 text-white" />
-                </span>
-              </div>
-            )}
+            <div
+              className={` ${isScrolled ? "md:flex" : "hidden"} w-full items-center justify-between rounded-full bg-gray-100 px-2 py-2`}
+            >
+              <input
+                type="text"
+                placeholder="What are you look for?"
+                className="w-full pl-2 text-xs font-medium text-black placeholder:text-black focus:outline-none"
+              />
+              <span className="rounded-full bg-pink-500/80 p-2.5 hover:cursor-pointer hover:bg-pink-400">
+                <CiSearch className="h-5 w-5 text-white" />
+              </span>
+            </div>
 
             {/* Laptop screen items  */}
             <div className="hidden gap-5 whitespace-nowrap min-[1200px]:flex">
@@ -229,9 +235,12 @@ const Navbar = () => {
             <button className="hidden text-sm font-semibold text-black md:block">
               Sign up
             </button>
-            <button className="rounded-3xl bg-black px-5 py-2 text-sm font-medium text-white md:py-3">
+            <Link
+              to="/home"
+              className="rounded-3xl bg-black px-5 py-2 text-sm font-medium text-white md:py-3"
+            >
               Log in
-            </button>
+            </Link>
           </div>
         </div>
       </div>

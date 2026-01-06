@@ -1,4 +1,6 @@
 import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Filters from "./Filters";
@@ -8,14 +10,14 @@ import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Hero />
       <Filters />
       <HomeCards />
       <Marque />
       <Footer />
-    </div>
+    </>
   );
 };
 

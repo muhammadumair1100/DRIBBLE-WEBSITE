@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { TrendingUp, Sparkles } from "lucide-react";
 
@@ -14,10 +15,13 @@ const BadgeOne = () => {
       >
         <div className="relative">
           <div className="flex flex-col gap-8 py-6">
-            <div className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500">
+            <Link
+              to="popular"
+              className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500"
+            >
               <TrendingUp strokeWidth={1.5} className="size-5" />
               <span className="font-semibold tracking-tight">Popular</span>
-            </div>
+            </Link>
             <div className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500">
               <Sparkles strokeWidth={1.5} color="black" className="size-5" />
               <span className="font-semibold tracking-tight">

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cards } from "./Homecard";
+import { cards as defaultCards } from "./Homecard";
 import { GoHeartFill } from "react-icons/go";
 import { TbEyeFilled } from "react-icons/tb";
 import { LuHeart } from "react-icons/lu";
 import { LuMessagesSquare } from "react-icons/lu";
 
-const HomeCards = () => {
+const HomeCards = ({ cards = defaultCards }) => {
   const [activeCard, setActiveCard] = useState(null);
   const [columns, setColumns] = useState(0);
 
@@ -56,11 +56,11 @@ const HomeCards = () => {
             onMouseLeave={() => setActiveCard(null)}
             className="flex flex-col gap-2"
           >
-            <div className="group relative aspect-video w-full hover:cursor-pointer">
+            <div className="group relative aspect-6/5 w-full overflow-hidden rounded-md hover:cursor-pointer min-[950px]:aspect-3/4 md:aspect-5/4 xl:aspect-4/3">
               <img
                 src={card.image}
                 alt=""
-                className="h-full w-full rounded-md object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
 
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -85,13 +85,15 @@ const HomeCards = () => {
               <div className="flex items-center gap-1 hover:cursor-pointer">
                 <div
                   onMouseEnter={() => setActiveCard(index)}
-                  className="flex items-center gap-1"
+                  className="flex max-w-[140px] items-center gap-1"
                 >
-                  <img
-                    src={card.userImage}
-                    alt=""
-                    className="h-6.5 w-6.5 rounded-full"
-                  />
+                  <span className="size-7">
+                    <img
+                      src={card.userImage}
+                      alt=""
+                      className="h-full w-full rounded-full object-cover"
+                    />
+                  </span>
                   <h1 className="flex-1 truncate text-sm font-medium">
                     {card.title}
                   </h1>
@@ -135,9 +137,9 @@ const HomeCards = () => {
                         <div className="relative hover:cursor-pointer">
                           <div className="h-13 w-14 rounded-full">
                             <img
-                              src={card.image}
+                              src={card.userImage}
                               alt=""
-                              className="h-full w-full rounded-full object-center"
+                              className="h-full w-full rounded-full object-cover"
                             />
                           </div>
                           <span
@@ -165,21 +167,21 @@ const HomeCards = () => {
                     <div className="flex items-center justify-between gap-4 hover:cursor-pointer">
                       <div className="h-22 w-38 rounded-md">
                         <img
-                          className="h-full w-full rounded-md object-center"
+                          className="h-full w-full rounded-md object-cover"
                           src={card.image}
                           alt=""
                         />
                       </div>
                       <div className="h-22 w-38 rounded-md">
                         <img
-                          className="h-full w-full rounded-md object-center"
+                          className="h-full w-full rounded-md object-cover"
                           src={card.imageTwo}
                           alt=""
                         />
                       </div>
                       <div className="h-22 w-38 rounded-md">
                         <img
-                          className="h-full w-full rounded-md object-center"
+                          className="h-full w-full rounded-md object-cover"
                           src={card.imageThree}
                           alt=""
                         />
