@@ -67,7 +67,7 @@ const HomeCards = ({ cards = defaultCards }) => {
 
               <div className="absolute bottom-4 left-0 flex w-full items-center justify-between gap-2 px-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="overflow-hidden">
-                  <h1 className="truncate text-sm font-semibold text-white">
+                  <h1 className="text-md truncate font-medium text-white md:text-sm md:font-semibold">
                     {card.heading}
                   </h1>
                 </div>

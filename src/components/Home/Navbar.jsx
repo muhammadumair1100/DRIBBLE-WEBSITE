@@ -144,7 +144,7 @@ const Navbar = () => {
             </span>
 
             <div
-              className={` ${isScrolled ? "md:flex" : "hidden"} w-full items-center justify-between rounded-full bg-gray-100 px-2 py-2`}
+              className={` ${isScrolled && "md:flex"} hidden w-full items-center justify-between rounded-full bg-gray-100 px-2 py-2`}
             >
               <input
                 type="text"
