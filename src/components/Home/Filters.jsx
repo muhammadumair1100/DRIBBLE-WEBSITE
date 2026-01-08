@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation, Link } from "react-router-dom";
+
 import { IoIosArrowDown } from "react-icons/io";
 import { IoFilter } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
@@ -13,6 +15,15 @@ const Filters = () => {
   const [filter, setFilter] = useState(false);
   const [timeFrame, setTimeFrame] = useState("Now");
   const [timeFrameAnimate, setTimeFrameAnimate] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/noteworthy") {
+      setSelected("New & Noteworthy");
+    } else {
+      setSelected("Popular");
+    }
+  });
 
   const handleSelect = (item) => {
     setSelected(item);
@@ -30,6 +41,20 @@ const Filters = () => {
     "Typography",
     "Web Design",
   ];
+
+  useEffect(() => {
+    const matchedItem = cardSlider.find((s) => {
+      const slug = "/" + s.toLowerCase().replace(/\s+/g, "-");
+      return slug === location.pathname;
+    });
+
+    if (matchedItem) {
+      setSelectedSlider(matchedItem);
+      console.log(matchedItem);
+    } else {
+      setSelectedSlider("Discover");
+    }
+  }, []);
 
   const timeFrameSlide = [
     "Now",
@@ -64,16 +89,18 @@ const Filters = () => {
               className={`absolute flex flex-col gap-1 ${activeItem ? "block" : "hidden"} top-full left-0 z-10 mt-2 w-48 rounded-md border border-gray-200 bg-white px-3 py-2`}
             >
               {/* Popular Item */}
-              <div
+              <Link
+                to="/popular"
                 onClick={() => handleSelect("Popular")}
                 className={`flex items-center justify-between rounded-md ${selected === "Popular" && "bg-gray-200/50"} cursor-pointer px-2 py-3`}
               >
                 <span className="text-xs font-medium">Popular</span>
                 {selected === "Popular" ? <FaCheck className="h-3 w-3" /> : ""}
-              </div>
+              </Link>
 
               {/* New & Noteworthy Item */}
-              <div
+              <Link
+                to="/noteworthy"
                 className={`flex items-center justify-between rounded-md ${selected === "New & Noteworthy" && "bg-gray-200/50"} cursor-pointer px-2 py-3`}
                 onClick={() => handleSelect("New & Noteworthy")}
               >
@@ -85,20 +112,22 @@ const Filters = () => {
                 ) : (
                   ""
                 )}
-              </div>
+              </Link>
             </div>
           </div>
 
+          {/* card slider for large screen */}
           <div className="scrollbar-hide hidden overflow-x-scroll px-2 lg:block">
             <div className="flex items-center gap-2">
               {cardSlider.map((slide, idx) => (
-                <span
+                <Link
+                  to={"/" + slide.toLowerCase().replace(/\s+/g, "-")}
                   key={idx}
                   onClick={() => setSelectedSlider(slide)}
                   className={`rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-all duration-200 hover:cursor-pointer hover:text-gray-600 xl:text-[12px] ${seletedSlider === slide && "bg-gray-100"}`}
                 >
                   {slide}
-                </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -116,16 +145,18 @@ const Filters = () => {
         </div>
         <hr className="mt-2 mb-4 h-1 text-gray-200 lg:hidden" />
 
+        {/* card slider for mobile screen */}
         <div className="scrollbar-hide overflow-x-scroll px-4 lg:hidden">
           <div className="flex items-center gap-2">
             {cardSlider.map((slide, idx) => (
-              <span
+              <Link
+                to={"/" + slide.toLowerCase().replace(/\s+/g, "-")}
                 key={idx}
                 onClick={() => setSelectedSlider(slide)}
                 className={` ${seletedSlider === slide && "bg-gray-100"} rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-all duration-200 hover:cursor-pointer hover:text-gray-600`}
               >
                 {slide}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -68,8 +68,6 @@ const Navbar = () => {
     },
   };
 
-  console.log(location);
-
   const childAnimate = {
     open: {
       opacity: 1,
@@ -124,7 +122,7 @@ const Navbar = () => {
                 ></motion.span>
               </div>
             </span>
-            <span>
+            <Link to="/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="210"
@@ -141,7 +139,7 @@ const Navbar = () => {
                   fill="currentColor"
                 ></path>
               </svg>
-            </span>
+            </Link>
 
             <div
               className={` ${isScrolled && "md:flex"} hidden w-full items-center justify-between rounded-full bg-gray-100 px-2 py-2`}

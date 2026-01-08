@@ -16,18 +16,21 @@ const BadgeOne = () => {
         <div className="relative">
           <div className="flex flex-col gap-8 py-6">
             <Link
-              to="popular"
+              to="/popular"
               className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500"
             >
               <TrendingUp strokeWidth={1.5} className="size-5" />
               <span className="font-semibold tracking-tight">Popular</span>
             </Link>
-            <div className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500">
+            <Link
+              to="/noteworthy"
+              className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500"
+            >
               <Sparkles strokeWidth={1.5} color="black" className="size-5" />
               <span className="font-semibold tracking-tight">
                 New and Noteworthy
               </span>
-            </div>
+            </Link>
           </div>
           <div className="h-[0.5px] w-[30%] bg-neutral-300 min-[1200px]:w-full"></div>
         </div>
@@ -50,15 +53,17 @@ const Products = () => {
     "Typography",
     "Print",
   ];
+
   return (
     <div className="mt-8 flex flex-col gap-7">
       {products.map((p, index) => (
-        <span
+        <Link
+          to={"/" + p.toLowerCase().replace(/\s+/g, "-")}
           key={index}
           className="text-sm font-medium text-neutral-900 hover:cursor-pointer hover:text-neutral-500"
         >
           {p}
-        </span>
+        </Link>
       ))}
     </div>
   );

@@ -5,9 +5,11 @@ import { GoHeartFill } from "react-icons/go";
 import { TbEyeFilled } from "react-icons/tb";
 import { LuHeart } from "react-icons/lu";
 import { LuMessagesSquare } from "react-icons/lu";
+import { IoMdVideocam } from "react-icons/io";
 
 const HomeCards = ({ cards = defaultCards }) => {
   const [activeCard, setActiveCard] = useState(null);
+  const [activeVideo, setActiveVideo] = useState(null);
   const [columns, setColumns] = useState(0);
 
   const formatNumber = (num) => {
@@ -16,11 +18,6 @@ const HomeCards = ({ cards = defaultCards }) => {
     }
     return num;
   };
-
-  window.addEventListener("click", () => {
-    const height = window.innerHeight;
-    console.log(height);
-  });
 
   useEffect(() => {
     const updateColumns = () => {
@@ -56,12 +53,47 @@ const HomeCards = ({ cards = defaultCards }) => {
             onMouseLeave={() => setActiveCard(null)}
             className="flex flex-col gap-2"
           >
-            <div className="group relative aspect-6/5 w-full overflow-hidden rounded-md hover:cursor-pointer min-[950px]:aspect-3/4 md:aspect-5/4 xl:aspect-4/3">
-              <img
-                src={card.image}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+            <div
+              onMouseEnter={() =>
+                card.type === "video" && setActiveVideo(index)
+              }
+              onMouseLeave={() => setActiveVideo(null)}
+              className="group relative aspect-6/5 w-full overflow-hidden rounded-md hover:cursor-pointer min-[950px]:aspect-3/4 md:aspect-5/4 xl:aspect-4/3"
+            >
+              {/* no need to add framer motion this much  */}
+              <AnimatePresence>
+                {activeVideo === index ? (
+                  <motion.video
+                    key={`video-${index}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    exit={{ opacity: 0 }}
+                    src={card.video}
+                    loop
+                    playsInline
+                    autoPlay
+                    muted
+                    className="absolute inset-0 h-full w-full object-cover"
+                  ></motion.video>
+                ) : (
+                  <motion.img
+                    key={`image-${index}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    exit={{ opacity: 0 }}
+                    src={card.image}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  ></motion.img>
+                )}
+              </AnimatePresence>
+
+              {card.type === "video" && (
+                <div className="absolute top-2 right-3 rounded-full bg-black/30 p-1">
+                  {<IoMdVideocam className="size-3 text-white" />}
+                </div>
+              )}
 
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
@@ -130,12 +162,12 @@ const HomeCards = ({ cards = defaultCards }) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className={`absolute bottom-9 ${isLastInRow(index) ? "-right-2" : "-left-2"} z-50 flex w-[500px] flex-col gap-5 rounded-lg bg-white p-6 text-black shadow-[2px_2px_20px_rgba(0,0,0,0.5)]`}
+                    className={`absolute bottom-9 ${isLastInRow(index) ? "riht-0 min-[500px]:-right-2" : "left-0 min-[500px]:-left-2"} z-50 flex w-[400px] flex-col gap-5 rounded-lg bg-white p-3 text-black shadow-[2px_2px_20px_rgba(0,0,0,0.5)] min-[500px]:w-[500px] min-[500px]:p-6`}
                   >
                     <div className="flex w-full items-center justify-between">
                       <div className="flex max-w-[200px] items-center gap-3">
                         <div className="relative hover:cursor-pointer">
-                          <div className="h-13 w-14 rounded-full">
+                          <div className="size-12 rounded-full">
                             <img
                               src={card.userImage}
                               alt=""
@@ -156,10 +188,10 @@ const HomeCards = ({ cards = defaultCards }) => {
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <button className="rounded-full border border-neutral-300 bg-white px-5 py-2.5 text-sm font-semibold text-black hover:cursor-pointer">
+                        <button className="rounded-full border border-neutral-300 bg-white px-5 py-2.5 text-xs font-semibold text-black hover:cursor-pointer min-[500px]:text-sm">
                           Follow
                         </button>
-                        <button className="px- rounded-full border border-neutral-300 bg-black px-4 py-2.5 text-sm font-medium text-white hover:cursor-pointer hover:bg-black/70">
+                        <button className="rounded-full border border-neutral-300 bg-black px-4 py-2.5 text-xs font-medium text-white hover:cursor-pointer hover:bg-black/70 min-[500px]:text-sm">
                           Get in touch
                         </button>
                       </div>
