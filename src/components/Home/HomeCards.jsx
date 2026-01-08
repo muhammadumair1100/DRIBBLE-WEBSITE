@@ -162,12 +162,12 @@ const HomeCards = ({ cards = defaultCards }) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className={`absolute bottom-9 ${isLastInRow(index) ? "riht-0 min-[500px]:-right-2" : "left-0 min-[500px]:-left-2"} z-50 flex w-[400px] flex-col gap-5 rounded-lg bg-white p-3 text-black shadow-[2px_2px_20px_rgba(0,0,0,0.5)] min-[500px]:w-[500px] min-[500px]:p-6`}
+                    className={`absolute bottom-9 ${isLastInRow(index) ? "-right-4.5 min-[500px]:-right-2" : "left-2 min-[500px]:-left-2"} z-50 flex w-[350px] flex-col gap-5 rounded-lg bg-white p-3 text-black shadow-[2px_2px_20px_rgba(0,0,0,0.5)] min-[500px]:w-[500px] min-[500px]:p-6`}
                   >
                     <div className="flex w-full items-center justify-between">
                       <div className="flex max-w-[200px] items-center gap-3">
                         <div className="relative hover:cursor-pointer">
-                          <div className="size-12 rounded-full">
+                          <div className="size-10 rounded-full min-[500px]:size-12">
                             <img
                               src={card.userImage}
                               alt=""
@@ -188,10 +188,10 @@ const HomeCards = ({ cards = defaultCards }) => {
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <button className="rounded-full border border-neutral-300 bg-white px-5 py-2.5 text-xs font-semibold text-black hover:cursor-pointer min-[500px]:text-sm">
+                        <button className="rounded-full border border-neutral-300 bg-white px-2.5 py-2 text-xs font-semibold text-black hover:cursor-pointer min-[500px]:text-sm">
                           Follow
                         </button>
-                        <button className="rounded-full border border-neutral-300 bg-black px-4 py-2.5 text-xs font-medium text-white hover:cursor-pointer hover:bg-black/70 min-[500px]:text-sm">
+                        <button className="rounded-full border border-neutral-300 bg-black px-2 py-2 text-[10px] font-medium text-white hover:cursor-pointer hover:bg-black/70 min-[500px]:text-sm">
                           Get in touch
                         </button>
                       </div>
