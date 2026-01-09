@@ -50,7 +50,6 @@ const Filters = () => {
 
     if (matchedItem) {
       setSelectedSlider(matchedItem);
-      console.log(matchedItem);
     } else {
       setSelectedSlider("Discover");
     }

@@ -1,5 +1,6 @@
 import React from "react";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { SquareKanban, UsersRound, Tag } from "lucide-react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { IoBookOutline } from "react-icons/io5";
@@ -33,7 +34,8 @@ const BadgeTwo = ({ itemData, line1, line2, line3 }) => {
       >
         <div className="mt-7 flex flex-col gap-8 min-[1200px]:gap-0">
           {(itemData || hireTalent).map((talent, index) => (
-            <div
+            <Link
+              to={"/" + talent.title.toLowerCase().replace(/\s+/g, "-")}
               key={index}
               className="group flex gap-2 rounded-lg hover:cursor-pointer hover:bg-neutral-100 min-[1200px]:p-4"
             >
@@ -46,7 +48,7 @@ const BadgeTwo = ({ itemData, line1, line2, line3 }) => {
                   {talent.line}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
           <div className="mt-2 flex flex-col gap-7">
             <div className="flex flex-col gap-2">

@@ -8,8 +8,8 @@ const cards = [
       "https://cdn.dribbble.com/userupload/46258786/file/0571599e59c389e773e94856373057af.jpg?crop=0x0-3146x2359&resize=280x210",
     userImage:
       "https://cdn.dribbble.com/users/1948330/avatars/small/3c530796cf95cfa22bf2f7b21af3a2dc.jpg?1753460516",
-    title: "Oleksandr ",
-    location: "Ukraine",
+    title: "Oleksandr",
+    location: "Ukranie",
     premuim: "",
     liked: 16,
     viewed: 648,
@@ -18,20 +18,20 @@ const cards = [
   },
   {
     image:
-      "https://cdn.dribbble.com/userupload/46299167/file/1f425af76cfd8c4c3c71b4ccc4a54f97.jpg?format=webp&resize=1200x900&vertical=center",
+      "https://cdn.dribbble.com/userupload/46312152/file/4e841935b23d54393580cd5cd9c36703.jpg?format=webp&resize=1200x900&vertical=center",
     imageTwo:
-      "https://cdn.dribbble.com/userupload/46311579/file/60a0decfdb6fc41a8b8153250411d046.jpg?crop=0x0-2400x1800&resize=280x210",
+      "https://cdn.dribbble.com/userupload/46300013/file/1a859819c316e624537f6e8e811c0a03.jpg?resize=280x210",
     imageThree:
       "https://cdn.dribbble.com/userupload/46286092/file/29129aa7258edda1247f7c18dd20a07f.jpg?crop=0x0-4800x3600&resize=280x210",
     userImage:
-      "https://cdn.dribbble.com/users/23185894/avatars/small/5d13d47f53bef6a79d44bb98724cbb75.png?1766836968",
-    title: "Heloxone",
-    location: "India",
+      "https://cdn.dribbble.com/users/14234205/avatars/small/e9a5b2cdacae7c0a957ef398b14e435b.png?1747553492",
+    title: "Seative Digital",
+    location: "United States",
     premuim: "Team",
     liked: 50,
     viewed: 1500,
     type: "image",
-    heading: "VITAL 3D - Fitness & Health UI",
+    heading: "Ollie.AI - AI Assistant for Customer Support Website",
   },
   {
     image:
