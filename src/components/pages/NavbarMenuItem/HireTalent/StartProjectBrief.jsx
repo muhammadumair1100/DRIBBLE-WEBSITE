@@ -70,12 +70,12 @@ const StartProjectBrief = () => {
               Get Started
             </button>
           </div>
-          <div className="mt-3 flex items-center gap-3">
-            <p className="text-sm text-neutral-400 underline">
+          <div className="mt-3 flex items-center gap-2 min-[400px]:gap-3">
+            <p className="text-xs text-neutral-400 underline min-[400px]:text-sm">
               How hiring works
             </p>
             <span className="text-neutral-400">|</span>
-            <p className="text-sm text-neutral-400 underline">
+            <p className="text-xs text-neutral-400 underline min-[400px]:text-sm">
               Peace of mind guarantee
             </p>
           </div>
