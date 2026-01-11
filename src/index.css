@@ -15,3 +15,24 @@
   background-color: yellow;
   color: black;
 }
+
+/* index.css */
+
+/* 1. Scrollbar ki width set karein */
+/* Custom Scrollbar for News and Home */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Zyada mota scrollbar bura lagta hai */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Background ko saaf rakhein */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d4d4d4; /* Neutral-300 color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3; /* Mouse over karne par thoda dark ho jaye */
+}
