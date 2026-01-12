@@ -2,14 +2,14 @@ import { X, MessageSquareText, SendHorizonal } from "lucide-react";
 const Messages = ({ isOpen }) => {
   return (
     <div className="relative bg-neutral-100/30">
-      <div className="flex justify-center gap-15 border-b border-neutral-300 py-3">
-        <h1 className="font-semibold">Messages</h1>
-        <span
+      <div className="relative flex w-full shrink-0 items-center justify-center border-b border-neutral-200 bg-white py-4">
+        <h1 className="text-sm font-bold text-neutral-800">Message</h1>
+        <button
           onClick={() => isOpen(false)}
-          className="absolute top-2.5 right-5 rounded-lg p-2 hover:cursor-pointer hover:bg-neutral-200"
+          className="absolute right-4 rounded-lg p-1.5 text-neutral-500 transition-colors hover:bg-neutral-100"
         >
-          <X className="size-4" />
-        </span>
+          <X size={18} />
+        </button>
       </div>
       <div className="flex h-[500px] flex-col items-center justify-center gap-4">
         <MessageSquareText strokeWidth={3} />

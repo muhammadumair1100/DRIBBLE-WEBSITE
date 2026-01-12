@@ -72,19 +72,17 @@ const Dropdown = () => {
             initial={{
               opacity: 0,
               scale: 0.5,
-              x: 100, // Thoda right se aayega
-              y: 100, // Thoda niche se aayega
+              x: 100,
+              y: 100,
             }}
-            // Animate state: Card kahan tak jayega
             animate={{
               opacity: 1,
               scale: 1,
               x: 0,
               y: 0,
             }}
-            // Transition: Animation ki speed aur style
             transition={{
-              duration: 0.3,
+              duration: 0.2,
               ease: "easeInOut",
             }}
             className="fixed right-0 bottom-0 h-screen w-full overflow-auto bg-white shadow-[0_0_50px_rgba(0,0,0,0.5)] min-[450px]:right-7 min-[450px]:bottom-8 min-[450px]:h-[92vh] min-[450px]:w-96 min-[450px]:rounded-3xl"

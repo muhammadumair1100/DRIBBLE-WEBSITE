@@ -56,7 +56,7 @@ const Help = ({ isOpen }) => {
           </span>
         </div>
       </div>
-      <div className="custom-scrollbar h-[450px] overflow-auto">
+      <div className="custom-scrollbar max-h-[440px] overflow-auto">
         <div className="mt-1">
           {helpItems.map((item, index) => (
             <div

@@ -88,7 +88,7 @@ const Navbar = () => {
     <AnimatePresence>
       <div>
         <div
-          className={`flex ${location.pathname === "/popular" && "fixed"} ${isScrolled ? "fixed" : "absolute"} top-0 left-0 z-100 w-full items-center justify-between gap-15 bg-white px-4 py-4 md:px-8 md:py-4`}
+          className={`flex ${location.pathname === "/popular" && "fixed"} ${isScrolled ? "fixed" : "absolute"} top-0 left-0 z-100 w-full items-center justify-between gap-15 bg-white px-4 py-4 md:px-10 md:py-6`}
         >
           <div
             className={`flex items-center md:min-w-8/12 ${isScrolled ? "min-[1200px]:gap-8" : "min-[1200px]:gap-15"} gap-4`}
@@ -230,15 +230,22 @@ const Navbar = () => {
           </motion.div>
 
           <div className="flex gap-5">
-            <button className="hidden text-sm font-semibold text-black md:block">
-              Sign up
+            <button>
+              <Link
+                to="/signup"
+                className="hidden text-sm font-semibold text-black md:block"
+              >
+                Sign up
+              </Link>
             </button>
-            <Link
-              to="/home"
-              className="rounded-3xl bg-black px-5 py-2 text-sm font-medium text-white md:py-3"
-            >
-              Log in
-            </Link>
+            <button>
+              <Link
+                to="/login"
+                className="rounded-3xl bg-black px-5 py-2 text-sm font-medium text-white md:py-3"
+              >
+                Log in
+              </Link>
+            </button>
           </div>
         </div>
       </div>

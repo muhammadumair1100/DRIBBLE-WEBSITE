@@ -17,8 +17,12 @@ import Mobile from "./components/pages/NavbarMenuItem/ExplorePages/Mobile";
 import Print from "./components/pages/NavbarMenuItem/ExplorePages/Print";
 import Typography from "./components/pages/NavbarMenuItem/ExplorePages/Typography";
 
+// signup & login pages
+import Signup from "./components/pages/SignupLogin/Signup";
+
 // HireTalent Pages
 import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/StartProjectBrief";
+import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/browseprofiles/BrowseProfiles";
 
 const App = () => {
   return (
@@ -39,8 +43,13 @@ const App = () => {
           <Route path="/print" element={<Print />} />
           <Route path="/typography" element={<Typography />} />
 
+          {/* signup & login pages  */}
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Signup />} />
+
           {/* Navbar HireTalent ItemsPages */}
           <Route path="/start-project-brief" element={<StartProjectBrief />} />
+          <Route path="/browse-profiles" element={<BrowseProfiles />} />
         </Routes>
       </div>
     </BrowserRouter>

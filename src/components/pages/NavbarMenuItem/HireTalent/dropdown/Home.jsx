@@ -80,7 +80,7 @@ const Home = ({ isOpen }) => {
         </div>
 
         {/* title and images  */}
-        <div className="flex items-center gap-20 pt-8 pl-10">
+        <div className="mt-20 flex items-center gap-20 pl-10 min-[450px]:mt-10">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,9 +120,9 @@ const Home = ({ isOpen }) => {
               Hi there👋 <br></br> How can we help?
             </h1>
           </div>
-          <div className="mt-8 flex flex-col gap-2.5 px-8 min-[450px]:px-5">
+          <div className="mt-8 flex flex-col items-center gap-2.5 px-0">
             {titleParagraphs.map((card) => (
-              <div className="rounded-xl border border-neutral-300 bg-white p-4 shadow-sm hover:cursor-pointer">
+              <div className="w-77 rounded-xl border border-neutral-300 bg-white p-4 shadow-sm hover:cursor-pointer min-[450px]:w-85">
                 <h1 className="text-xs font-semibold">{card.title}</h1>
                 <p className="mt-1 text-xs">{card.paragraph}</p>
               </div>
@@ -132,7 +132,7 @@ const Home = ({ isOpen }) => {
 
         {/* parent card with multiple paragraphs  */}
         <div className="flex flex-col items-center gap-3">
-          <div className="mt-4 flex w-85 flex-col justify-between gap-1 rounded-xl border border-neutral-300 bg-white px-3 py-4 shadow-sm">
+          <div className="mx-10 mt-3 flex w-77 flex-col justify-between gap-1 rounded-xl border-2 border-neutral-300 bg-white px-3 py-4 shadow-sm min-[450px]:w-85">
             {namesIcone.map((name) => (
               <div
                 onClick={() => setActiveName(name.name)}
@@ -143,7 +143,7 @@ const Home = ({ isOpen }) => {
               </div>
             ))}
           </div>
-          <div className="flex w-85 items-center justify-between rounded-xl border border-neutral-300 bg-white px-5 py-3.5 shadow-sm hover:cursor-pointer">
+          <div className="flex w-77 items-center justify-between rounded-xl border-2 border-neutral-300 bg-white px-5 py-3.5 shadow-sm hover:cursor-pointer min-[450px]:w-85">
             <div className="">
               <h1 className="text-xs font-semibold">Send us a message</h1>
               <p className="mt-1 text-xs font-normal text-neutral-600">
@@ -154,7 +154,7 @@ const Home = ({ isOpen }) => {
               <SendHorizontal size={17} />
             </div>
           </div>
-          <div className="flex w-85 flex-col justify-between gap-4 rounded-xl border border-neutral-300 bg-white px-5 py-4 shadow-sm">
+          <div className="flex w-77 flex-col justify-between gap-4 rounded-xl border border-neutral-300 bg-white px-5 py-4 shadow-sm min-[450px]:w-85">
             <h1 className="text-sm font-semibold">Create a ticket</h1>
             {titleIcone.map((name) => (
               <div
@@ -166,7 +166,7 @@ const Home = ({ isOpen }) => {
             ))}
           </div>
 
-          <div className="mb-2 flex w-85 flex-col justify-between gap-0 rounded-xl border border-neutral-300 bg-white pb-3 shadow-sm hover:cursor-pointer">
+          <div className="mb-2 flex w-77 flex-col justify-between gap-0 rounded-xl border border-neutral-300 bg-white pb-3 shadow-sm hover:cursor-pointer min-[450px]:w-85">
             <div className="h-40 w-full rounded-xl object-center">
               <img
                 className="h-full w-full rounded-xl object-center"
