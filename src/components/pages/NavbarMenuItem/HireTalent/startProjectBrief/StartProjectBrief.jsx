@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link, Links } from "react-router-dom";
 import { NotebookText, Check } from "lucide-react";
-import Dropdown from "./Dropdown";
+import Dropdown from "../dropdown/Dropdown";
 
 const Navbar = () => {
   return (
@@ -29,7 +29,7 @@ const Navbar = () => {
       </div>
       <div>
         <Link to="/">
-          <button className="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium">
+          <button className="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium hover:cursor-pointer">
             Cancel
           </button>
         </Link>

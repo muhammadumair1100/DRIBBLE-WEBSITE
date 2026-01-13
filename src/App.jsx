@@ -21,7 +21,7 @@ import Typography from "./components/pages/NavbarMenuItem/ExplorePages/Typograph
 import Signup from "./components/pages/SignupLogin/Signup";
 
 // HireTalent Pages
-import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/StartProjectBrief";
+import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/startProjectBrief/StartProjectBrief";
 import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/browseprofiles/BrowseProfiles";
 
 const App = () => {

@@ -1,12 +1,16 @@
 import React from "react";
 import Navbar from "../../../../Home/Navbar";
 import HeroSection from "./HeroSection";
+import Dropdown from "../dropdown/Dropdown";
+import CardsSection from "./CardsSection";
 const BrowseProfiles = () => {
   return (
-    <div>
+    <div className="relative">
+      <Dropdown></Dropdown>
       <Navbar />
       <div className="pt-20"></div>
       <HeroSection />
+      <CardsSection />
     </div>
   );
 };

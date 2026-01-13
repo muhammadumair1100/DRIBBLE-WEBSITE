@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ChevronDown,
   SlidersHorizontal,
   Sparkles,
   MoveRight,
+  X,
 } from "lucide-react";
 
 const HeroSection = () => {
+  const [scroll, setScroll] = useState(0);
+  const [filter, setFilter] = useState(true);
+
+  if (filter) {
+    document.body.style.overflow = "hidden";
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setScroll(scrollY);
+      console.log(scroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scroll]);
+
   const items = [
     "logo design",
     "landing page",
@@ -61,7 +80,9 @@ const HeroSection = () => {
 
         <div className="w-full border border-neutral-100"></div>
       </div>
-      <div className="relative">
+      <div
+        className={`${scroll > 400 ? "fixed top-26 z-100 pb-3" : "relative"} w-full bg-white transition-all duration-500`}
+      >
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-5 bg-linear-to-r from-white to-transparent sm:hidden" />
         <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-5 bg-linear-to-l from-white to-transparent sm:hidden" />
 
@@ -74,7 +95,10 @@ const HeroSection = () => {
           }}
           className="mt-4 flex items-center gap-2 overflow-x-scroll"
         >
-          <div className="rounded-full border border-neutral-300 p-2.5 hover:cursor-pointer hover:border-neutral-400">
+          <div
+            onClick={() => setFilter(true)}
+            className="rounded-full border border-neutral-300 p-2.5 hover:cursor-pointer hover:border-neutral-400"
+          >
             <SlidersHorizontal size={14} />
           </div>
           <ul className="flex gap-3">
@@ -91,6 +115,7 @@ const HeroSection = () => {
       </div>
 
       <Banner />
+      {filter && <Filter />}
     </div>
   );
 };
@@ -99,7 +124,7 @@ export default HeroSection;
 
 const Banner = () => {
   return (
-    <div className="mt-5 flex w-full flex-col gap-3 rounded-xl bg-blue-50/80 px-4 py-9 hover:cursor-pointer md:flex-row">
+    <div className="mt-5 flex w-full flex-col gap-3 rounded-xl bg-blue-50/80 px-4 py-9 hover:cursor-pointer md:flex-row md:gap-6">
       <motion.div
         animate={{
           borderColor: ["#0471A6", "#89AAE6", "#63A375", "#2CDA9D"],
@@ -133,6 +158,56 @@ const Banner = () => {
             </span>
           </p>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Filter = () => {
+  const categories = [
+    "Logo & Branding",
+    "Web Design",
+    "Illustration",
+    "Product Design",
+    "Mobile",
+    "Animation",
+    "Typography",
+    "Print",
+  ];
+  return (
+    <div className="fixed top-1/2 left-1/2 z-100 h-[95vh] w-[450px] -translate-1/2 rounded-xl bg-white shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+      <div
+        style={{ scrollbarWidth: "none" }}
+        className="flex h-full flex-col gap-5 overflow-auto"
+      >
+        <div className="relative rounded-t-xl border-b border-neutral-200 bg-white py-5">
+          <h1 className="text-center font-semibold">Filters</h1>
+          <span className="absolute top-6 right-6">
+            <X size={17} />
+          </span>
+        </div>
+        <div className="px-10">
+          <h1 className="text-sm font-bold">Categories</h1>
+          <ul className="mt-2 grid grid-cols-2 gap-2 text-center">
+            {categories.map((category, index) => (
+              <li
+                key={index}
+                className="rounded-full border border-neutral-200/90 py-1.5 text-xs"
+              >
+                {category}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div className="absolute bottom-0 w-full bg-gray-100 py-5 text-center">
+        <button className="w-[80%] rounded-full bg-black py-3.5 text-sm font-semibold text-white hover:cursor-pointer hover:bg-black/75">
+          Apply
+        </button>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 import React, { act } from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Home from "./dropdown/Home";
-import Messages from "./dropdown/Messages";
-import Help from "./dropdown/Help";
-import News from "./dropdown/News";
+import Home from "./Home";
+import Messages from "./Messages";
+import Help from "./Help";
+import News from "./News";
 import {
   House,
   MessageSquareText,
@@ -24,7 +24,7 @@ const Dropdown = () => {
   ];
 
   return (
-    <div className="fixed right-7 bottom-10 z-100">
+    <div className="fixed right-7 bottom-10 z-1000">
       <div className="relative">
         <button
           onClick={() => setIsOpen(true)}
