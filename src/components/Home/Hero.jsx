@@ -117,7 +117,7 @@ const Hero = () => {
   return (
     <div>
       <div className="mt-20 flex items-center gap-28 px-3 min-[1200px]:px-12 md:mt-25">
-        <div className="flex w-full flex-col px-4 xl:w-2/4">
+        <div className="flex w-full flex-col xl:w-2/4">
           <div className="flex flex-col items-center md:items-start">
             <h1 className="text-center text-4xl leading-9 font-semibold tracking-tight md:text-start md:text-5xl md:leading-13">
               Discover the <br /> World's Top <br className="hidden" />{" "}
@@ -128,8 +128,8 @@ const Hero = () => {
               ready to take on your next project.
             </p>
           </div>
-          <div className="mt-10 flex flex-col items-center gap-3 md:items-start">
-            <div className="gap-3f flex lg:gap-5">
+          <div className="mt-10 flex w-full flex-col items-center gap-3 md:items-start">
+            <div className="flex gap-1 lg:gap-5">
               {searchItems.map((Item, idx) => (
                 <div
                   key={idx}
@@ -161,7 +161,7 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="flex w-full items-center justify-between rounded-full bg-gray-100 px-2 py-2">
+            <div className="flex w-full items-center justify-between gap-2 rounded-full bg-gray-100 px-2 py-2">
               <input
                 type="text"
                 placeholder={
@@ -173,10 +173,10 @@ const Hero = () => {
                         ? "What do you need designed?"
                         : "Search..."
                 }
-                className="w-full pl-2 text-xs font-medium text-black placeholder:text-black focus:outline-none"
+                className="w-full text-xs font-medium text-black placeholder:text-black focus:outline-none"
               />
-              <span className="rounded-full bg-pink-500/80 p-2.5 hover:cursor-pointer hover:bg-pink-400">
-                <CiSearch className="h-5 w-5 text-white" />
+              <span className="rounded-full bg-pink-500/80 p-2 hover:cursor-pointer hover:bg-pink-400">
+                <CiSearch className="size-5 text-white" />
               </span>
             </div>
             <div className="scrollbar-hide mt-2 flex w-full items-center gap-2 overflow-x-scroll overflow-y-hidden px-2">
