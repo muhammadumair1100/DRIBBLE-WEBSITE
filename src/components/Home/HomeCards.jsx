@@ -6,11 +6,28 @@ import { TbEyeFilled } from "react-icons/tb";
 import { LuHeart } from "react-icons/lu";
 import { LuMessagesSquare } from "react-icons/lu";
 import { IoMdVideocam } from "react-icons/io";
+import { useParams } from "react-router-dom";
 
-const HomeCards = ({ cards = defaultCards }) => {
+const HomeCards = ({}) => {
+  const [HomeCard, setHomeCards] = useState([]);
   const [activeCard, setActiveCard] = useState(null);
   const [activeVideo, setActiveVideo] = useState(null);
   const [columns, setColumns] = useState(0);
+
+  useEffect(() => {
+    const fetchingData = async () => {
+      try {
+        const response = await fetch("public/homedata.json");
+        const data = await response.json(response);
+        const randomOrder = data.sort(() => Math.random() - 0.5);
+        const shuffle = randomOrder.slice(0, 25);
+        setHomeCards(shuffle);
+      } catch (error) {
+        console.log("an error occur :", error);
+      }
+    };
+    fetchingData();
+  }, []);
 
   const formatNumber = (num) => {
     if (num >= 1000) {
@@ -47,7 +64,7 @@ const HomeCards = ({ cards = defaultCards }) => {
   return (
     <div className="relative z-0">
       <div className="mt-5 grid gap-8 px-6 min-[600px]:grid-cols-2 min-[950px]:grid-cols-3 min-[1200px]:px-18 xl:grid-cols-4 xl:px-18">
-        {cards.map((card, index) => (
+        {HomeCard.map((card, index) => (
           <div
             key={index}
             onMouseLeave={() => setActiveCard(null)}

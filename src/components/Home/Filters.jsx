@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, NavLink } from "react-router-dom";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { IoFilter } from "react-icons/io5";
@@ -18,7 +18,7 @@ const Filters = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/noteworthy") {
+    if (location.pathname === "/shots/recent") {
       setSelected("New & Noteworthy");
     } else {
       setSelected("Popular");
@@ -64,7 +64,7 @@ const Filters = () => {
   ];
 
   return (
-    <div>
+    <div className="pt-20">
       <div className="relative z-50">
         <div className="mt-7 flex items-center justify-between px-6 py-2 min-[1200px]:px-18 lg:gap-10">
           {/* Dropdown Button aur Container */}
@@ -89,7 +89,7 @@ const Filters = () => {
             >
               {/* Popular Item */}
               <Link
-                to="/popular"
+                to="/shots/popular"
                 onClick={() => handleSelect("Popular")}
                 className={`flex items-center justify-between rounded-md ${selected === "Popular" && "bg-gray-200/50"} cursor-pointer px-2 py-3`}
               >
@@ -99,7 +99,7 @@ const Filters = () => {
 
               {/* New & Noteworthy Item */}
               <Link
-                to="/noteworthy"
+                to="/shots/recent"
                 className={`flex items-center justify-between rounded-md ${selected === "New & Noteworthy" && "bg-gray-200/50"} cursor-pointer px-2 py-3`}
                 onClick={() => handleSelect("New & Noteworthy")}
               >
@@ -119,14 +119,19 @@ const Filters = () => {
           <div className="scrollbar-hide hidden overflow-x-scroll px-2 lg:block">
             <div className="flex items-center gap-2">
               {cardSlider.map((slide, idx) => (
-                <Link
-                  to={"/" + slide.toLowerCase().replace(/\s+/g, "-")}
+                <NavLink
+                  to={`/shots/${slide.toLowerCase().replace(/\s+/g, "-")}`}
                   key={idx}
                   onClick={() => setSelectedSlider(slide)}
-                  className={`rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-all duration-200 hover:cursor-pointer hover:text-gray-600 xl:text-[12px] ${seletedSlider === slide && "bg-gray-100"}`}
+                  // className ko function bana kar isActive extract karein
+                  className={({ isActive }) =>
+                    `rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-all duration-200 hover:cursor-pointer hover:text-gray-600 xl:text-[12px] ${
+                      isActive ? "bg-gray-100" : "text-black"
+                    }`
+                  }
                 >
                   {slide}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </div>
@@ -148,14 +153,16 @@ const Filters = () => {
         <div className="scrollbar-hide overflow-x-scroll px-4 lg:hidden">
           <div className="flex items-center gap-2">
             {cardSlider.map((slide, idx) => (
-              <Link
-                to={"/" + slide.toLowerCase().replace(/\s+/g, "-")}
+              <NavLink
+                to={`/shots/${slide.toLowerCase().replace(/\s+/g, "-")}`}
                 key={idx}
                 onClick={() => setSelectedSlider(slide)}
-                className={` ${seletedSlider === slide && "bg-gray-100"} rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-all duration-200 hover:cursor-pointer hover:text-gray-600`}
+                className={({ isActive }) =>
+                  ` ${isActive && "bg-gray-100"} rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-all duration-200 hover:cursor-pointer hover:text-gray-600`
+                }
               >
                 {slide}
-              </Link>
+              </NavLink>
             ))}
           </div>
         </div>

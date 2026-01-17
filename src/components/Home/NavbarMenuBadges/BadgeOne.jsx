@@ -16,14 +16,14 @@ const BadgeOne = () => {
         <div className="relative">
           <div className="flex flex-col gap-8 py-6">
             <Link
-              to="/popular"
+              to={`/shots/popular`}
               className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500"
             >
               <TrendingUp strokeWidth={1.5} className="size-5" />
               <span className="font-semibold tracking-tight">Popular</span>
             </Link>
             <Link
-              to="/noteworthy"
+              to="/shots/recent"
               className="flex items-center gap-2 hover:cursor-pointer hover:text-neutral-500"
             >
               <Sparkles strokeWidth={1.5} color="black" className="size-5" />
@@ -58,7 +58,7 @@ const Products = () => {
     <div className="mt-8 flex flex-col gap-7">
       {products.map((p, index) => (
         <Link
-          to={"/" + p.toLowerCase().replace(/\s+/g, "-")}
+          to={`/shots/${p.toLowerCase().replace(/\s+/g, "-")}`}
           key={index}
           className="text-sm font-medium text-neutral-900 hover:cursor-pointer hover:text-neutral-500"
         >

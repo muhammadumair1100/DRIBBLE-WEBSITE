@@ -194,47 +194,18 @@ const Cards = () => {
             style={{ scrollbarWidth: "none" }}
             className="relative flex w-full flex-nowrap gap-3 overflow-auto"
           >
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 rounded-full bg-white p-2">
-              <ChevronLeft size={25} strokeWidth={2.8} />
-            </div>
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 rounded-full bg-white p-2">
-              <ChevronRight size={25} strokeWidth={2.8} />
-            </div>
-            <div className="h-48 w-64 shrink-0 overflow-hidden rounded-lg lg:shrink">
-              <img
-                className="h-full w-full rounded-lg object-center transition-all duration-500 hover:scale-105"
-                src="https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center"
-                alt=""
-              />
-            </div>
-            <div className="h-48 w-64 shrink-0 overflow-hidden rounded-lg lg:shrink">
-              <img
-                className="h-full w-full rounded-lg object-center transition-all duration-500 hover:scale-105"
-                src="https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center"
-                alt=""
-              />
-            </div>
-            <div className="h-48 w-64 shrink-0 overflow-hidden rounded-lg lg:shrink">
-              <img
-                className="h-full w-full rounded-lg object-center transition-all duration-500 hover:scale-105"
-                src="https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center"
-                alt=""
-              />
-            </div>
-            <div className="h-48 w-64 shrink-0 overflow-hidden rounded-lg lg:shrink">
-              <img
-                className="h-full w-full rounded-lg object-center transition-all duration-500 hover:scale-105"
-                src="https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center"
-                alt=""
-              />
-            </div>
-            <div className="h-48 w-64 shrink-0 overflow-hidden rounded-lg lg:shrink">
-              <img
-                className="h-full w-full rounded-lg object-center transition-all duration-500 hover:scale-105"
-                src="https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center"
-                alt=""
-              />
-            </div>
+            {data?.images?.map((img, index) => (
+              <div
+                key={index}
+                className="h-48 w-64 shrink-0 overflow-hidden rounded-lg lg:shrink"
+              >
+                <img
+                  className="h-full w-full rounded-lg object-center transition-all duration-500 hover:scale-105"
+                  src={img}
+                  alt=""
+                />
+              </div>
+            ))}
           </div>
           {/* footer  */}
           <div className="flex flex-col flex-wrap gap-2">

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../../../Home/Navbar";
 import HeroSection from "./HeroSection";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "../Dropdown/dropdown";
 import CardsSection from "./CardsSection";
 const BrowseProfiles = () => {
   return (

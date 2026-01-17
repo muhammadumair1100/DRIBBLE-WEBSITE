@@ -21,16 +21,13 @@ const BrowseData = [
       "web design",
       "saas ui",
     ],
-    imageOne:
+    images: [
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageTwo:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageThree:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFour:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFive:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
+    ],
   },
   {
     ProfileImage: "https://randomuser.me/api/portraits/men/32.jpg",
@@ -54,16 +51,13 @@ const BrowseData = [
       "animation",
       "logo design",
     ],
-    imageOne:
+    images: [
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageTwo:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageThree:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFour:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFive:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
+    ],
   },
   {
     ProfileImage: "https://randomuser.me/api/portraits/men/32.jpg",
@@ -87,16 +81,13 @@ const BrowseData = [
       "web design",
       "saas ui",
     ],
-    imageOne:
+    images: [
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageTwo:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageThree:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFour:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFive:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
+    ],
   },
   {
     ProfileImage: "https://randomuser.me/api/portraits/men/32.jpg",
@@ -120,16 +111,13 @@ const BrowseData = [
       "web design",
       "saas ui",
     ],
-    imageOne:
+    images: [
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageTwo:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageThree:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFour:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFive:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
+    ],
   },
   {
     ProfileImage: "https://randomuser.me/api/portraits/men/32.jpg",
@@ -153,16 +141,13 @@ const BrowseData = [
       "web design",
       "saas ui",
     ],
-    imageOne:
+    images: [
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageTwo:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageThree:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFour:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFive:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
+    ],
   },
   {
     ProfileImage: "https://randomuser.me/api/portraits/men/32.jpg",
@@ -186,16 +171,13 @@ const BrowseData = [
       "web design",
       "saas ui",
     ],
-    imageOne:
+    images: [
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageTwo:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageThree:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFour:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
-    imageFive:
       "https://cdn.dribbble.com/userupload/43132037/file/original-b0cfb2bf6c81a0ccd8ed174acf801417.png?resize=400x300&vertical=center",
+    ],
   },
 ];
 
