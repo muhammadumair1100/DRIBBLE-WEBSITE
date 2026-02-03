@@ -17,7 +17,7 @@ const HomeCards = ({ onSelect }) => {
   useEffect(() => {
     const fetchingData = async () => {
       try {
-        const response = await fetch("public/homedata.json");
+        const response = await fetch("/homedata.json");
         const data = await response.json(response);
         const randomOrder = data.sort(() => Math.random() - 0.5);
         const shuffle = randomOrder.slice(0, 25);
