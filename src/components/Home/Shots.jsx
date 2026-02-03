@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import { cards as defaultCards } from "./Homecard";
 import { GoHeartFill } from "react-icons/go";
 import { TbEyeFilled } from "react-icons/tb";
 import { LuHeart } from "react-icons/lu";
@@ -8,7 +7,6 @@ import { LuMessagesSquare } from "react-icons/lu";
 import { IoMdVideocam } from "react-icons/io";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { cards } from "./Homecard";
 import { useParams } from "react-router-dom";
 import Filters from "./Filters";
 import Marque from "./Marque";
@@ -23,13 +21,11 @@ const Shots = () => {
 
   useEffect(() => {
     const fetchingData = async () => {
-      // 1. Pehle state ko khali karein taake purana data hat jaye
       setHomeCards([]);
 
       try {
         const response = await fetch(`/shots/${id}.json`);
 
-        // 2. Check karein ke response theek hai ya nahi (404 check)
         if (!response.ok) {
           throw new Error("File nahi mili!");
         }

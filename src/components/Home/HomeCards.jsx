@@ -8,7 +8,7 @@ import { LuMessagesSquare } from "react-icons/lu";
 import { IoMdVideocam } from "react-icons/io";
 import { useParams } from "react-router-dom";
 
-const HomeCards = ({}) => {
+const HomeCards = ({ onSelect }) => {
   const [HomeCard, setHomeCards] = useState([]);
   const [activeCard, setActiveCard] = useState(null);
   const [activeVideo, setActiveVideo] = useState(null);
@@ -71,13 +71,13 @@ const HomeCards = ({}) => {
             className="flex flex-col gap-2"
           >
             <div
+              onClick={() => onSelect(true)}
               onMouseEnter={() =>
                 card.type === "video" && setActiveVideo(index)
               }
               onMouseLeave={() => setActiveVideo(null)}
-              className="group relative aspect-6/5 w-full overflow-hidden rounded-md hover:cursor-pointer min-[950px]:aspect-3/4 md:aspect-5/4 xl:aspect-4/3"
+              className="group relative aspect-6/5 w-full overflow-hidden rounded-md border-8 hover:cursor-pointer min-[950px]:aspect-3/4 md:aspect-5/4 xl:aspect-4/3"
             >
-              {/* no need to add framer motion this much  */}
               <AnimatePresence>
                 {activeVideo === index ? (
                   <motion.video

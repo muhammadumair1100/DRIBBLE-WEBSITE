@@ -18,7 +18,6 @@ const App = () => {
           {/* Navbar Explore Items & Filter Items Pages */}
           <Route path="/" element={<Home />} />
           <Route path="/shots/:id" element={<Shots />} />
-          // signup & login pages
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Signup />} />
           {/* Navbar HireTalent ItemsPages */}
