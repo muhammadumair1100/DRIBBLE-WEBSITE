@@ -9,6 +9,7 @@ import Shots from "./components/Home/Shots";
 // HireTalent Pages
 import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/startProjectBrief/StartProjectBrief";
 import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/browseprofiles/BrowseProfiles";
+import SelectedCard from "./components/pages/HomeCards/SelectedCard";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/shots/:id" element={<Shots />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Signup />} />
+          {/* for home cards  */}
+          <Route path="/selectCard/:id" element={<SelectedCard />} />
           {/* Navbar HireTalent ItemsPages */}
           <Route path="/start-project-brief" element={<StartProjectBrief />} />
           <Route path="/browse-profiles" element={<BrowseProfiles />} />

@@ -6,7 +6,7 @@ import { TbEyeFilled } from "react-icons/tb";
 import { LuHeart } from "react-icons/lu";
 import { LuMessagesSquare } from "react-icons/lu";
 import { IoMdVideocam } from "react-icons/io";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const HomeCards = ({ onSelect }) => {
   const [HomeCard, setHomeCards] = useState([]);
@@ -70,13 +70,14 @@ const HomeCards = ({ onSelect }) => {
             onMouseLeave={() => setActiveCard(null)}
             className="flex flex-col gap-2"
           >
-            <div
+            <Link
+              to={`/selectCard/${card.heading.replace(/\s+/g, "-")}`}
               onClick={() => onSelect(true)}
               onMouseEnter={() =>
                 card.type === "video" && setActiveVideo(index)
               }
               onMouseLeave={() => setActiveVideo(null)}
-              className="group relative aspect-6/5 w-full overflow-hidden rounded-md border-8 hover:cursor-pointer min-[950px]:aspect-3/4 md:aspect-5/4 xl:aspect-4/3"
+              className="group relative aspect-6/5 w-full overflow-hidden rounded-md hover:cursor-pointer min-[950px]:aspect-3/4 md:aspect-5/4 xl:aspect-4/3"
             >
               <AnimatePresence>
                 {activeVideo === index ? (
@@ -101,6 +102,7 @@ const HomeCards = ({ onSelect }) => {
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     exit={{ opacity: 0 }}
                     src={card.image}
+                    alt={card.heading}
                     className="absolute inset-0 h-full w-full object-cover"
                   ></motion.img>
                 )}
@@ -129,7 +131,7 @@ const HomeCards = ({ onSelect }) => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="relative flex justify-between gap-2">
               <div className="flex items-center gap-1 hover:cursor-pointer">
                 <div
