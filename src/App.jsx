@@ -10,6 +10,7 @@ import Shots from "./components/Home/Shots";
 import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/startProjectBrief/StartProjectBrief";
 import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/browseprofiles/BrowseProfiles";
 import SelectedCard from "./components/pages/HomeCards/SelectedCard";
+import { BsXLg } from "react-icons/bs";
 
 const App = () => {
   return (
