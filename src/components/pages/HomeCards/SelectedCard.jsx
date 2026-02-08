@@ -1,6 +1,4 @@
-import React from "react";
 import { X } from "lucide-react";
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import UserDetail from "./UserDetail";
 
@@ -17,7 +15,6 @@ const SelectedCard = () => {
           onClick={() => navigate(-1)}
         />
       </div>
-
       <UserDetail />
     </div>
   );
