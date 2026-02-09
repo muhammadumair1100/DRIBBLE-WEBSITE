@@ -8,7 +8,7 @@ import { LuMessagesSquare } from "react-icons/lu";
 import { IoMdVideocam } from "react-icons/io";
 import { Link, useParams } from "react-router-dom";
 
-const HomeCards = ({ onSelect }) => {
+const HomeCards = ({ onSelect, limit }) => {
   const [HomeCard, setHomeCards] = useState([]);
   const [activeCard, setActiveCard] = useState(null);
   const [activeVideo, setActiveVideo] = useState(null);
@@ -19,8 +19,8 @@ const HomeCards = ({ onSelect }) => {
       try {
         const response = await fetch("/homedata.json");
         const data = await response.json(response);
-        const randomOrder = data.sort(() => Math.random() - 0.5);
-        const shuffle = randomOrder.slice(0, 25);
+        data.sort(() => Math.random() - 0.5);
+        const shuffle = limit ? data.slice(0, limit) : data.slice(0, 25);
         setHomeCards(shuffle);
       } catch (error) {
         console.log("an error occur :", error);
@@ -63,7 +63,9 @@ const HomeCards = ({ onSelect }) => {
 
   return (
     <div className="relative z-0">
-      <div className="mt-5 grid gap-8 px-6 min-[600px]:grid-cols-2 min-[950px]:grid-cols-3 min-[1200px]:px-18 xl:grid-cols-4 xl:px-18">
+      <div
+        className={`mt-5 grid gap-8 min-[600px]:grid-cols-2 ${limit ? "px-3 lg:grid-cols-3 lg:px-0" : "px-6 min-[950px]:grid-cols-3 min-[1200px]:px-18 xl:grid-cols-4 xl:px-18"} `}
+      >
         {HomeCard.map((card, index) => (
           <div
             key={index}
@@ -154,7 +156,7 @@ const HomeCards = ({ onSelect }) => {
                   {card.premuim}
                 </span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className={`flex items-center gap-2 ${limit && "hidden"}`}>
                 <div className="flex items-center gap-1">
                   <span>
                     <GoHeartFill className="size-3.5 text-gray-400 hover:cursor-pointer hover:text-pink-300" />

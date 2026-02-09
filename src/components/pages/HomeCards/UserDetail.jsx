@@ -9,6 +9,8 @@ import {
   CircleAlert,
 } from "lucide-react";
 import Filter from "./Filter";
+import MoreBy from "./MoreBy";
+import YouMightLike from "./YouMightLike";
 
 function UserDetail() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,8 +44,6 @@ function UserDetail() {
         );
 
         setData(match);
-
-        console.log(match);
       } catch (err) {
         console.log("Data was not received...", err);
       }
@@ -60,21 +60,21 @@ function UserDetail() {
           {data?.heading}
         </h1>
         <div
-          className={`${isScrolled && "sticky inset-x-0 top-0 py-2 "}bg-white z-50 flex justify-between px-4`}
+          className={`${isScrolled && "sticky inset-x-0 top-0 py-2 "}bg-white z-50 flex justify-between gap-3 px-4`}
         >
-          <div className="flex items-center gap-3">
-            <div className="size-8 min-[500px]:size-12">
+          <div className="flex items-center gap-2">
+            <div className="size-8 shrink-0 min-[500px]:size-12">
               <img
                 src={data?.userImage}
                 alt=""
                 className="size-full rounded-full"
               />
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <p className="text-xs font-semibold min-[500px]:text-sm">
                 {data?.title}
               </p>
-              <p className="truncate text-[10px] text-green-600 min-[500px]:text-xs">
+              <p className="text-[10px] whitespace-nowrap text-green-600 min-[500px]:text-xs">
                 Available for work
               </p>
               <p className="hidden text-neutral-600">Follow</p>
@@ -156,6 +156,8 @@ function UserDetail() {
           title={data?.title}
           heading={data?.heading}
         />
+        <MoreBy userObj={data} />
+        <YouMightLike />
       </div>
     </>
   );

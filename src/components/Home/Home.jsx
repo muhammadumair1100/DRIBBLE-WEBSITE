@@ -10,12 +10,6 @@ import Footer from "./Footer";
 import SelectedCard from "../pages/HomeCards/SelectedCard";
 const Home = () => {
   const [selectedCard, setSelectedCard] = useState(false);
-  console.log(selectedCard);
-  // if (selectedCard) {
-  //   document.body.style.overflow = "hidden";
-  // } else {
-  //   document.body.style.overflow = "unset";
-  // }
 
   return (
     <>
