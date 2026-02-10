@@ -5,7 +5,7 @@ const YouMightLike = () => {
   return (
     <div className="py-10">
       <div>
-        <h1 className="font-bold">You might also like</h1>
+        <h1 className="px-3 font-bold">You might also like</h1>
       </div>
       <HomeCards limit={6} />
     </div>
