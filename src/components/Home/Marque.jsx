@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const Marque = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -69,7 +70,8 @@ const Marque = () => {
         onMouseLeave={() => setIsPaused(false)}
       >
         {[...marqueData, ...marqueData].map((marque, idx) => (
-          <div
+          <Link
+            to={`/shots/${marque.title.toLowerCase().replace(/\s+/g, "-")}`}
             key={idx}
             className="group relative shrink-0 hover:cursor-pointer"
           >
@@ -98,7 +100,7 @@ const Marque = () => {
             <div className="mt-3.5 text-xs font-semibold text-gray-800">
               {marque.title}
             </div>
-          </div>
+          </Link>
         ))}
       </motion.div>
     </div>

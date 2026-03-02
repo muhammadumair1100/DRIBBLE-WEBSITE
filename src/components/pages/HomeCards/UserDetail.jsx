@@ -49,7 +49,7 @@ function UserDetail() {
       }
     }
     fetchData();
-  }, []);
+  }, [id]);
   return (
     <>
       <div

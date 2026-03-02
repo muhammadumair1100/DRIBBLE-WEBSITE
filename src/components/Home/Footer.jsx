@@ -3,6 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { SiPicsart } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const footerItems = [
@@ -51,9 +52,13 @@ const Footer = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-4 px-4 text-sm leading-3 font-semibold lg:gap-10">
             {footerItems.map((item, i) => (
-              <span key={i} className="hover:cursor-pointer">
+              <Link
+                to={item.toLowerCase().replace(/\s+/g, "-")}
+                key={i}
+                className="hover:cursor-pointer"
+              >
                 {item}
-              </span>
+              </Link>
             ))}
           </div>
           <div className="flex gap-3">

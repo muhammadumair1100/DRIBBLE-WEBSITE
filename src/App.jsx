@@ -10,8 +10,7 @@ import Shots from "./components/Home/Shots";
 import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/startProjectBrief/StartProjectBrief";
 import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/browseprofiles/BrowseProfiles";
 import SelectedCard from "./components/pages/HomeCards/SelectedCard";
-import { BsXLg } from "react-icons/bs";
-
+import ForDesigners from "./components/pages/FooterPagess/ForDesigners/ForDesigners";
 const App = () => {
   return (
     <BrowserRouter>
@@ -27,6 +26,9 @@ const App = () => {
           {/* Navbar HireTalent ItemsPages */}
           <Route path="/start-project-brief" element={<StartProjectBrief />} />
           <Route path="/browse-profiles" element={<BrowseProfiles />} />
+
+          {/* Footer Pages  */}
+          <Route path="/for-designers" element={<ForDesigners />} />
         </Routes>
       </div>
     </BrowserRouter>
