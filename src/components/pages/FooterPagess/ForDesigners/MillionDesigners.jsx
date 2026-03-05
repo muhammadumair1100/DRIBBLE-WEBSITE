@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const MillionDesigners = () => {
@@ -33,40 +32,59 @@ const MillionDesigners = () => {
 };
 
 const Marques = () => {
-  const left = [
+  const leftMarque = [
+    "https://framerusercontent.com/images/xkZ7dVj1qLNLuAraCMPkIr7zMw.png?scale-down-to=512&width=2048&height=1463",
     "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
+    "https://framerusercontent.com/images/Ylyfz349UjCCKopaMoLgXZ5A.png?scale-down-to=512&width=1394&height=932",
+    "https://framerusercontent.com/images/eSknAtYZCX32BngG6dhtE7VrXn0.png?scale-down-to=512&width=2048&height=1536",
+    "https://framerusercontent.com/images/SPQ1Q8u4RnMXYyXwMIlpXdDOuzw.png?scale-down-to=512&width=1504&height=1128",
+    "https://framerusercontent.com/images/eSknAtYZCX32BngG6dhtE7VrXn0.png?scale-down-to=512&width=2048&height=1536",
+    "https://framerusercontent.com/images/nWevRbWaC9HGngvl6bIAX5EWm4M.png?scale-down-to=512&width=1600&height=1200  ",
+    "https://framerusercontent.com/images/xkZ7dVj1qLNLuAraCMPkIr7zMw.png?scale-down-to=512&width=2048&height=1463",
+    "https://framerusercontent.com/images/eSknAtYZCX32BngG6dhtE7VrXn0.png?scale-down-to=512&width=2048&height=1536",
+  ];
+  const rightMarque = [
+    "https://framerusercontent.com/images/xkZ7dVj1qLNLuAraCMPkIr7zMw.png?scale-down-to=512&width=2048&height=1463",
     "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
-    "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
-    "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
-    "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
-    "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
-    "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
-    "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
-    "https://framerusercontent.com/images/5HIDKQW1h1ayPJADT6QYSAZc5Y.png?scale-down-to=512&width=573&height=381",
+    "https://framerusercontent.com/images/Ylyfz349UjCCKopaMoLgXZ5A.png?scale-down-to=512&width=1394&height=932",
+    "https://framerusercontent.com/images/eSknAtYZCX32BngG6dhtE7VrXn0.png?scale-down-to=512&width=2048&height=1536",
+    "https://framerusercontent.com/images/SPQ1Q8u4RnMXYyXwMIlpXdDOuzw.png?scale-down-to=512&width=1504&height=1128",
+    "https://framerusercontent.com/images/eSknAtYZCX32BngG6dhtE7VrXn0.png?scale-down-to=512&width=2048&height=1536",
+    "https://framerusercontent.com/images/nWevRbWaC9HGngvl6bIAX5EWm4M.png?scale-down-to=512&width=1600&height=1200  ",
+    "https://framerusercontent.com/images/xkZ7dVj1qLNLuAraCMPkIr7zMw.png?scale-down-to=512&width=2048&height=1463",
+    "https://framerusercontent.com/images/eSknAtYZCX32BngG6dhtE7VrXn0.png?scale-down-to=512&width=2048&height=1536",
   ];
   return (
-    <div className="w-full overflow-hidden">
+    <div className="space-y-10 overflow-hidden py-20">
       <motion.div
-        animate={{
-          x: ["0%", "-50%"], // 0 se shuru ho kar pure width tak left jaye
-        }}
+        initial={{ x: 0 }}
+        animate={{ x: "-50%" }}
         transition={{
-          x: {
-            repeat: Infinity, // Kabhi khatam na ho
-            repeatType: "loop", // Seamless loop
-            duration: 2, // Speed control (jitna bara number, utna slow)
-            ease: "linear", // Ek jaisi speed (smooth feel ke liye)
-          },
+          duration: 90,
+          repeat: Infinity,
+          ease: "linear",
         }}
-        className="flex w-full gap-10 pr-10"
+        className="flex w-max gap-8"
       >
-        {[...left, ...left].map((image, index) => (
-          <div className="h-60 shrink-0">
-            <img
-              key={index}
-              src={image}
-              className="h-full w-full object-center"
-            />
+        {[...leftMarque, ...leftMarque].map((image, index) => (
+          <div key={index} className="flex h-65 w-95 shrink-0">
+            <img src={image} className="h-full w-full object-cover" />
+          </div>
+        ))}
+      </motion.div>
+      <motion.div
+        initial={{ x: "-50%" }}
+        animate={{ x: 0 }}
+        transition={{
+          duration: 90,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="flex w-max gap-8"
+      >
+        {[...rightMarque, ...rightMarque].map((image, index) => (
+          <div key={index} className="flex h-65 w-95 shrink-0">
+            <img src={image} className="h-full w-full object-cover" />
           </div>
         ))}
       </motion.div>
