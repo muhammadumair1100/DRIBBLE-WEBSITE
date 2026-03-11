@@ -21,6 +21,7 @@ const Shots = () => {
 
   useEffect(() => {
     const fetchingData = async () => {
+
       setHomeCards([]);
 
       try {
@@ -31,6 +32,7 @@ const Shots = () => {
         }
 
         const data = await response.json();
+
         const filterData = data.filter((d) => d.category === id);
         const shuffle = filterData.sort(() => Math.random() - 0.5);
         setHomeCards(shuffle);

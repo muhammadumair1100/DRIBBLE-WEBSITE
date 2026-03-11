@@ -11,27 +11,40 @@ import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/star
 import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/browseprofiles/BrowseProfiles";
 import SelectedCard from "./components/pages/HomeCards/SelectedCard";
 import ForDesigners from "./components/pages/FooterPagess/ForDesigners/ForDesigners";
+import Services from "./components/pages/HeroSection/Search";
+import SearchProvider from "./context/SearchProvider";
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <div>
-        <Routes>
-          {/* Navbar Explore Items & Filter Items Pages */}
-          <Route path="/" element={<Home />} />
-          <Route path="/shots/:id" element={<Shots />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Signup />} />
-          {/* for home cards  */}
-          <Route path="/selectCard/:id" element={<SelectedCard />} />
-          {/* Navbar HireTalent ItemsPages */}
-          <Route path="/start-project-brief" element={<StartProjectBrief />} />
-          <Route path="/browse-profiles" element={<BrowseProfiles />} />
+    <SearchProvider>
+      <BrowserRouter>
+        <div>
+          <Routes>
+            {/* Navbar Explore Items & Filter Items Pages */}
+            <Route path="/" element={<Home />} />
+            <Route path="/shots/:id" element={<Shots />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Signup />} />
 
-          {/* Footer Pages  */}
-          <Route path="/for-designers" element={<ForDesigners />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+            {/* for hero section  */}
+            <Route path="/services/:id" element={<Services />}></Route>
+            <Route path="shots/:id" element={<Shots />} />
+
+            {/* for home cards  */}
+            <Route path="/selectCard/:id" element={<SelectedCard />} />
+            {/* Navbar HireTalent ItemsPages */}
+            <Route
+              path="/start-project-brief"
+              element={<StartProjectBrief />}
+            />
+            <Route path="/browse-profiles" element={<BrowseProfiles />} />
+
+            {/* Footer Pages  */}
+            <Route path="/for-designers" element={<ForDesigners />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </SearchProvider>
   );
 };
 

@@ -8,9 +8,13 @@ import { CgBrowse } from "react-icons/cg";
 import { CiSearch } from "react-icons/ci";
 import { BsStars } from "react-icons/bs";
 import { IoIosPause, IoIosPlay } from "react-icons/io";
+import { SearchIcon } from "lucide-react";
+import SearchInput from "./SearchInput";
 
 const Hero = () => {
   const videoRef = useRef(null);
+  const [inputClick, setInputClick] = useState(false);
+  const [searchInputItem, setSearchInputItem] = useState("");
 
   const [activeItem, setActiveItem] = useState("Shots");
   const searchItems = ["Shots", "Designers", "Services"];
@@ -161,8 +165,10 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <div className="flex w-full items-center justify-between gap-2 rounded-full bg-gray-100 px-2 py-2">
+            <div className="relative flex w-full items-center justify-between gap-2 rounded-full bg-gray-100 px-2 py-2">
               <input
+                onClick={() => setInputClick(true)}
+                onChange={(e) => setSearchInputItem(e.target.value)}
                 type="text"
                 placeholder={
                   activeItem === "Shots"
@@ -178,6 +184,14 @@ const Hero = () => {
               <span className="rounded-full bg-pink-500/80 p-2 hover:cursor-pointer hover:bg-pink-400">
                 <CiSearch className="size-5 text-white" />
               </span>
+
+              {inputClick && (
+                <div
+                  onClick={() => setInputClick(false)}
+                  className="fixed inset-0 z-95 bg-transparent"
+                ></div>
+              )}
+              {inputClick && <SearchInput value={searchInputItem} />}
             </div>
             <div className="scrollbar-hide mt-2 flex w-full items-center gap-2 overflow-x-scroll overflow-y-hidden px-2">
               <span className="text-xs font-bold">Popular:</span>
@@ -234,10 +248,8 @@ const Hero = () => {
             className={`group absolute bottom-3 left-3 rounded-full bg-white p-3 hover:cursor-pointer ${showPlayPause ? "block" : "hidden"}`}
           >
             {isPlaying ? (
-              // Agar video chal rahi hai, toh user ko rokne (PAUSE) ka option do
               <IoIosPause className="h-4 w-4 group-hover:text-pink-500" />
             ) : (
-              // Agar video ruki hui hai, toh user ko chalaane (PLAY) ka option do
               <IoIosPlay className="h-4 w-4 group-hover:text-pink-500" />
             )}
           </div>
