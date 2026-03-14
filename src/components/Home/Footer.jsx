@@ -17,7 +17,7 @@ const Footer = () => {
     "Support",
   ];
 
-  const footerYears = ["2025 Dibbble", "Terms", "Privacy", "Cookies"];
+  const footerYears = ["© 2026 Dibbble", "Terms", "Privacy", "Cookies"];
   const footerTags = [
     "Jobs",
     "Designers",
@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center gap-4 px-4 text-sm leading-3 font-semibold lg:gap-10">
             {footerItems.map((item, i) => (
               <Link
-                to={item.toLowerCase().replace(/\s+/g, "-")}
+                to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                 key={i}
                 className="hover:cursor-pointer"
               >

@@ -27,8 +27,7 @@ const App = () => {
             <Route path="/login" element={<Signup />} />
 
             {/* for hero section  */}
-            <Route path="/services/:id" element={<Services />}></Route>
-            <Route path="shots/:id" element={<Shots />} />
+            <Route path="/search/:id" element={<Services />}></Route>
 
             {/* for home cards  */}
             <Route path="/selectCard/:id" element={<SelectedCard />} />

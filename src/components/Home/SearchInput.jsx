@@ -5,21 +5,29 @@ import { useContext, useState } from "react";
 import { SearchContext } from "../../context/SearchProvider";
 
 export default function SearchInput({ value }) {
-  let allItems = useContext(SearchContext);
+  let { allItems, activeItem } = useContext(SearchContext);
 
   const itemsToShow = value
     ? allItems.filter((item) =>
         item.name.toLowerCase().includes(value.toLowerCase()),
       )
     : allItems;
-
+  console.log(itemsToShow);
   return (
     <div>
       {itemsToShow.length > 0 && (
         <div className="absolute top-15 left-0 z-100 w-full rounded-lg bg-white px-4 py-3 shadow-[0px_0px_20px_0px_rgba(0,0,0,0.1)]">
           {itemsToShow.slice(0, 6).map((item, i) => (
             <Link
-              to={`/services/${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+              to={
+                activeItem === "Shots"
+                  ? `/search/${item.name.toLowerCase().replace(/\s+/g, "-")}`
+                  : activeItem === "Designers"
+                    ? "/Designers"
+                    : activeItem === "Services"
+                      ? "/Services"
+                      : "/Shots"
+              }
               key={i}
               className="group flex items-center gap-3 rounded-lg px-2 py-3 hover:cursor-pointer hover:bg-neutral-100"
             >

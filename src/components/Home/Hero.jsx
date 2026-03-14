@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 import "./Hero.css";
 import { MdOutlineInsertPhoto } from "react-icons/md";
@@ -8,19 +9,33 @@ import { CgBrowse } from "react-icons/cg";
 import { CiSearch } from "react-icons/ci";
 import { BsStars } from "react-icons/bs";
 import { IoIosPause, IoIosPlay } from "react-icons/io";
-import { SearchIcon } from "lucide-react";
+import { SearchIcon, X } from "lucide-react";
 import SearchInput from "./SearchInput";
+import { SearchContext } from "../../context/SearchProvider";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const { activeItem, setActiveItem } = useContext(SearchContext);
   const videoRef = useRef(null);
   const [inputClick, setInputClick] = useState(false);
   const [searchInputItem, setSearchInputItem] = useState("");
-
-  const [activeItem, setActiveItem] = useState("Shots");
   const searchItems = ["Shots", "Designers", "Services"];
   const [currentVideoIdx, setCurrentVideoIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [showPlayPause, setShowPlayPause] = useState(false);
+
+  function handleSearchPage() {
+    const searchType = searchInputItem
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .trim();
+    if (!searchInputItem) {
+      navigate("/");
+    } else {
+      navigate(`/search/${searchType}`);
+    }
+  }
 
   const trendingItem = {
     Shots: ["dashboard", "landing page", "e-commerce", "logo", "card", "icons"],
@@ -158,7 +173,7 @@ const Hero = () => {
                     )}
                   </span>
                   <span
-                    className={` ${activeItem === Item ? "text-white" : "text-black"} text-sm font-medium font-semibold xl:text-xs`}
+                    className={` ${activeItem === Item ? "text-white" : "text-black"} text-sm font-semibold xl:text-xs`}
                   >
                     {Item}
                   </span>
@@ -170,6 +185,7 @@ const Hero = () => {
                 onClick={() => setInputClick(true)}
                 onChange={(e) => setSearchInputItem(e.target.value)}
                 type="text"
+                value={searchInputItem}
                 placeholder={
                   activeItem === "Shots"
                     ? "What type of design are you interested in?"
@@ -179,11 +195,25 @@ const Hero = () => {
                         ? "What do you need designed?"
                         : "Search..."
                 }
-                className="w-full text-xs font-medium text-black placeholder:text-black focus:outline-none"
+                className="w-full px-3 text-xs font-medium text-black placeholder:text-black focus:outline-none"
               />
-              <span className="rounded-full bg-pink-500/80 p-2 hover:cursor-pointer hover:bg-pink-400">
-                <CiSearch className="size-5 text-white" />
-              </span>
+
+              <div className="z-100 flex items-center gap-3">
+                {searchInputItem && (
+                  <div onClick={() => setSearchInputItem("")}>
+                    <X
+                      width={17}
+                      className="text-neutral-400 hover:cursor-pointer hover:text-neutral-600"
+                    />
+                  </div>
+                )}
+                <div
+                  onClick={handleSearchPage}
+                  className="rounded-full bg-pink-500/80 p-2 hover:cursor-pointer hover:bg-pink-400"
+                >
+                  <SearchIcon strokeWidth={1.5} className="size-5 text-white" />
+                </div>
+              </div>
 
               {inputClick && (
                 <div
@@ -197,12 +227,21 @@ const Hero = () => {
               <span className="text-xs font-bold">Popular:</span>
               <div className="w-ful flex items-center gap-2 rounded">
                 {trendingItem[activeItem].map((Item, idx) => (
-                  <span
+                  <Link
+                    to={
+                      activeItem === "Shots"
+                        ? `/search/${Item.toLowerCase().replace(/\s+/g, "-")}`
+                        : activeItem === "Designers"
+                          ? "/Designers"
+                          : activeItem === "Services"
+                            ? "/Services"
+                            : "/Shots"
+                    }
                     key={idx}
                     className="rounded-full border border-gray-200 px-4 py-1.5 text-xs font-medium whitespace-nowrap text-black/80 hover:cursor-pointer hover:bg-gray-100 xl:px-2 xl:text-[11px]"
                   >
                     {Item}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -260,8 +299,6 @@ const Hero = () => {
   );
 };
 
-export default Hero;
-
 const Banner = () => {
   return (
     <div className="px-5 hover:cursor-pointer min-[1200px]:px-18">
@@ -296,3 +333,5 @@ const Banner = () => {
     </div>
   );
 };
+
+export default Hero;

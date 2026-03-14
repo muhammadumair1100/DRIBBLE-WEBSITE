@@ -17,6 +17,7 @@ function UserDetail() {
   const scrollContainerRef = useRef(null);
   const [data, setData] = useState(null);
   const { id } = useParams();
+  console.log(data, id);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -36,11 +37,13 @@ function UserDetail() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const promise = await fetch("/homedata.json");
+        const promise = await fetch(`/homedata.json`);
         const apiData = await promise.json();
-
+        console.log(apiData);
         const match = apiData.find(
-          (m) => m.heading.replace(/\s+/g, "-") === id,
+          (m) =>
+            m.heading.replace(/\s+/g, "-") ===
+            id.toLowerCase().replace(/\s+/g, "-"),
         );
 
         setData(match);

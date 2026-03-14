@@ -64,7 +64,7 @@ const Filters = () => {
   ];
 
   return (
-    <div className="pt-10">
+    <div className="pt-20">
       <div className="relative z-50">
         <div className="mt-7 flex items-center justify-between px-6 py-2 min-[1200px]:px-18 lg:gap-10">
           {/* Dropdown Button aur Container */}

@@ -7,7 +7,7 @@ import { LuMessagesSquare } from "react-icons/lu";
 import { IoMdVideocam } from "react-icons/io";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Filters from "./Filters";
 import Marque from "./Marque";
 
@@ -21,7 +21,6 @@ const Shots = () => {
 
   useEffect(() => {
     const fetchingData = async () => {
-
       setHomeCards([]);
 
       try {
@@ -32,6 +31,7 @@ const Shots = () => {
         }
 
         const data = await response.json();
+        console.log(data);
 
         const filterData = data.filter((d) => d.category === id);
         const shuffle = filterData.sort(() => Math.random() - 0.5);
@@ -88,7 +88,8 @@ const Shots = () => {
               onMouseLeave={() => setActiveCard(null)}
               className="flex flex-col gap-2"
             >
-              <div
+              <Link
+                to={`/selectCard/${card.heading.replace(/\s+/g, "-")}`}
                 onMouseEnter={() =>
                   card.type === "video" && setActiveVideo(index)
                 }
@@ -147,7 +148,7 @@ const Shots = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </Link>
               <div className="relative flex justify-between gap-2">
                 <div className="flex items-center gap-1 hover:cursor-pointer">
                   <div
