@@ -3,58 +3,6 @@ import { useState } from "react";
 
 let allItems = [
   {
-    name: "Dashboard",
-    description:
-      "A central hub for data visualization and administrative control.",
-    related: ["admin", "stats", "overview"],
-  },
-  {
-    name: "Landing Page",
-    description: "A single web page designed to convert visitors into leads.",
-    related: ["marketing", "conversion", "sales"],
-  },
-  {
-    name: "E-commerce",
-    description: "Online platform for buying and selling products with ease.",
-    related: ["shopping", "cart", "checkout"],
-  },
-  {
-    name: "Logo",
-    description: "A distinct symbol representing a brand's unique identity.",
-    related: ["branding", "symbol", "mark"],
-  },
-  {
-    name: "Card",
-    description: "A compact UI container for grouping related information.",
-    related: ["ui", "layout", "preview"],
-  },
-  {
-    name: "Icons",
-    description: "Small visual symbols used for intuitive navigation.",
-    related: ["symbols", "vector", "ui"],
-  },
-  {
-    name: "App Design",
-    description:
-      "Creating user-centric interfaces for mobile and desktop apps.",
-    related: ["ui", "ux", "mobile"],
-  },
-  {
-    name: "Web Design",
-    description: "The process of planning and styling websites for browsers.",
-    related: ["frontend", "layout", "responsive"],
-  },
-  {
-    name: "Logo Design",
-    description: "The art of creating scalable brand marks and identities.",
-    related: ["vector", "identity", "creative"],
-  },
-  {
-    name: "Animation",
-    description: "Using motion to enhance user interaction and storytelling.",
-    related: ["motion", "interaction", "lottie"],
-  },
-  {
     name: "Branding",
     description: "The complete visual and verbal strategy of a business.",
     related: ["strategy", "identity", "marketing"],
@@ -110,6 +58,58 @@ let allItems = [
     description:
       "An input field that allows users to find specific content or items within a website or application by typing keywords.",
     related: ["input", "filtering", "navigation", "find", "utility"],
+  },
+  {
+    name: "Dashboard",
+    description:
+      "A central hub for data visualization and administrative control.",
+    related: ["admin", "stats", "overview"],
+  },
+  {
+    name: "Landing Page",
+    description: "A single web page designed to convert visitors into leads.",
+    related: ["marketing", "conversion", "sales"],
+  },
+  {
+    name: "E-commerce",
+    description: "Online platform for buying and selling products with ease.",
+    related: ["shopping", "cart", "checkout"],
+  },
+  {
+    name: "Logo",
+    description: "A distinct symbol representing a brand's unique identity.",
+    related: ["branding", "symbol", "mark"],
+  },
+  {
+    name: "Card",
+    description: "A compact UI container for grouping related information.",
+    related: ["ui", "layout", "preview"],
+  },
+  {
+    name: "Icons",
+    description: "Small visual symbols used for intuitive navigation.",
+    related: ["symbols", "vector", "ui"],
+  },
+  {
+    name: "App Design",
+    description:
+      "Creating user-centric interfaces for mobile and desktop apps.",
+    related: ["ui", "ux", "mobile"],
+  },
+  {
+    name: "Web Design",
+    description: "The process of planning and styling websites for browsers.",
+    related: ["frontend", "layout", "responsive"],
+  },
+  {
+    name: "Logo Design",
+    description: "The art of creating scalable brand marks and identities.",
+    related: ["vector", "identity", "creative"],
+  },
+  {
+    name: "Animation",
+    description: "Using motion to enhance user interaction and storytelling.",
+    related: ["motion", "interaction", "lottie"],
   },
   {
     name: "Accordion",

@@ -3,12 +3,12 @@ import { Heart, Bookmark } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 
 const MoreBy = ({ userObj }) => {
-  const { id } = useParams();
+  const { id, source } = useParams();
   const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
     async function getData() {
-      const promise = await fetch("/homedata.json");
+      const promise = await fetch(`/shots/${source}.json`);
       const data = await promise.json();
       data.sort(() => Math.random() - 0.9);
       setApiData(data);
@@ -26,7 +26,7 @@ const MoreBy = ({ userObj }) => {
       <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {apiData?.slice(0, 4).map((c, index) => (
           <Link
-            to={`/selectCard/${c.heading.replace(/\s+/g, "-")}`}
+            to={`/shots/${source}/${c.heading.replace(/\s+/g, "-")}`}
             key={index}
             className="group relative w-full hover:cursor-pointer"
           >

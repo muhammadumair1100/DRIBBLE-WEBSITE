@@ -12,7 +12,6 @@ export default function SearchInput({ value }) {
         item.name.toLowerCase().includes(value.toLowerCase()),
       )
     : allItems;
-  console.log(itemsToShow);
   return (
     <div>
       {itemsToShow.length > 0 && (

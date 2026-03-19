@@ -12,8 +12,6 @@ export default function Search() {
     (data) => data.name.toLowerCase().replace(/\s+/g, "-") === id,
   );
 
-  console.log(idName);
-
   return (
     <>
       {idName ? (
@@ -26,22 +24,23 @@ export default function Search() {
             <p className="text-center text-[0.9rem] leading-relaxed font-medium text-neutral-500 md:text-base">
               {idName?.description}
             </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              <span className="text-xs font-semibold text-neutral-400">
-                Related:
-              </span>
-              <div className="flex flex-wrap justify-center gap-2">
-                {idName?.related.map((relat, idx) => (
-                  <span
-                    key={idx}
-                    className="rounded-full bg-neutral-100 px-3 py-1 text-xs text-neutral-600 hover:cursor-pointer hover:bg-neutral-50"
-                  >
-                    {relat}
-                  </span>
-                ))}
+            {idName?.related.length > 0 && (
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                <span className="text-xs font-semibold text-neutral-400">
+                  Related:
+                </span>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {idName?.related.map((relat, idx) => (
+                    <span
+                      key={idx}
+                      className="rounded-full bg-neutral-100 px-3 py-1 text-xs text-neutral-600 hover:cursor-pointer hover:bg-neutral-50"
+                    >
+                      {relat}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <Shots />
         </div>

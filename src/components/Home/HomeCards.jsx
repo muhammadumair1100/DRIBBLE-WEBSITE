@@ -9,6 +9,7 @@ import { IoMdVideocam } from "react-icons/io";
 import { Link, useParams } from "react-router-dom";
 
 const HomeCards = ({ onSelect, limit }) => {
+  const { id, source } = useParams();
   const [HomeCard, setHomeCards] = useState([]);
   const [activeCard, setActiveCard] = useState(null);
   const [activeVideo, setActiveVideo] = useState(null);
@@ -17,7 +18,7 @@ const HomeCards = ({ onSelect, limit }) => {
   useEffect(() => {
     const fetchingData = async () => {
       try {
-        const response = await fetch("/homedata.json");
+        const response = await fetch(`/shots/${source}.json`);
         const data = await response.json(response);
         data.sort(() => Math.random() - 0.5);
         const shuffle = limit ? data.slice(0, limit) : data.slice(0, 25);
@@ -73,7 +74,7 @@ const HomeCards = ({ onSelect, limit }) => {
             className="flex flex-col gap-2"
           >
             <Link
-              to={`/selectCard/${card.heading.replace(/\s+/g, "-")}`}
+              to={`/shots/${source}/${card.heading.replace(/\s+/g, "-")}`}
               onClick={() => onSelect(true)}
               onMouseEnter={() =>
                 card.type === "video" && setActiveVideo(index)

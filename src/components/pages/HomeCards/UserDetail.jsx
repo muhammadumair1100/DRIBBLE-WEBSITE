@@ -16,12 +16,10 @@ function UserDetail() {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollContainerRef = useRef(null);
   const [data, setData] = useState(null);
-  const { id } = useParams();
-  console.log(data, id);
+  const { id, source } = useParams();
 
   useEffect(() => {
     const container = scrollContainerRef.current;
-
     const handleScroll = () => {
       if (container) {
         setIsScrolled(scrollContainerRef.current.scrollTop > 122);
@@ -37,15 +35,14 @@ function UserDetail() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const promise = await fetch(`/homedata.json`);
-        const apiData = await promise.json();
-        console.log(apiData);
-        const match = apiData.find(
+        const apiData = await fetch(`/shots/${source}.json`);
+        const pagesData = await apiData.json();
+
+        const match = pagesData.find(
           (m) =>
-            m.heading.replace(/\s+/g, "-") ===
+            m.heading.toLowerCase().replace(/\s+/g, "-") ===
             id.toLowerCase().replace(/\s+/g, "-"),
         );
-
         setData(match);
       } catch (err) {
         console.log("Data was not received...", err);
@@ -53,6 +50,7 @@ function UserDetail() {
     }
     fetchData();
   }, [id]);
+
   return (
     <>
       <div

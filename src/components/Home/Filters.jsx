@@ -71,7 +71,7 @@ const Filters = () => {
           <div
             // ActiveItem ko toggle sirf button par click karne par hona chahiye
             onClick={() => setActiveItem(!activeItem)}
-            className="relative flex cursor-pointer items-center justify-center gap-3 rounded-md border border-gray-200 px-3 py-2 shadow-sm"
+            className="relative flex cursor-pointer items-center justify-center gap-3 rounded-md border border-gray-200 px-3 py-2 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.1)]"
           >
             <h1 className="text-sm font-medium">{selected}</h1>
 

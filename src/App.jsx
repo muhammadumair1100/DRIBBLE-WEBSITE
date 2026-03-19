@@ -30,7 +30,7 @@ const App = () => {
             <Route path="/search/:id" element={<Services />}></Route>
 
             {/* for home cards  */}
-            <Route path="/selectCard/:id" element={<SelectedCard />} />
+            <Route path="/shots/:source/:id" element={<SelectedCard />} />
             {/* Navbar HireTalent ItemsPages */}
             <Route
               path="/start-project-brief"

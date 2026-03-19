@@ -12,7 +12,7 @@ import Filters from "./Filters";
 import Marque from "./Marque";
 
 const Shots = () => {
-  const { id } = useParams();
+  const { id, source } = useParams();
 
   const [HomeCard, setHomeCards] = useState([]);
   const [activeCard, setActiveCard] = useState(null);
@@ -31,7 +31,6 @@ const Shots = () => {
         }
 
         const data = await response.json();
-        console.log(data);
 
         const filterData = data.filter((d) => d.category === id);
         const shuffle = filterData.sort(() => Math.random() - 0.5);
@@ -42,7 +41,7 @@ const Shots = () => {
       }
     };
     fetchingData();
-  }, [id]);
+  }, [id, source]);
 
   const formatNumber = (num) => {
     if (num >= 1000) {
@@ -89,7 +88,7 @@ const Shots = () => {
               className="flex flex-col gap-2"
             >
               <Link
-                to={`/selectCard/${card.heading.replace(/\s+/g, "-")}`}
+                to={`/shots/${id}/${card.heading.replace(/\s+/g, "-")}`}
                 onMouseEnter={() =>
                   card.type === "video" && setActiveVideo(index)
                 }
