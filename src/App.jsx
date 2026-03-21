@@ -9,7 +9,7 @@ import Shots from "./components/Home/Shots";
 
 // HireTalent Pages
 import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/startProjectBrief/StartProjectBrief";
-import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/BrowseProfiles/BrowseProfile";
+import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/BrowseProfiles/BrowseProfile.jsx";
 import SelectedCard from "./components/pages/HomeCards/SelectedCard";
 import ForDesigners from "./components/pages/FooterPagess/ForDesigners/ForDesigners";
 import Services from "./components/pages/HeroSection/Search";
