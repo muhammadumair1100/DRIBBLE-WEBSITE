@@ -1,0 +1,172 @@
+[
+  {
+    "ProfileImage": "https://randomuser.me/api/portraits/men/44.jpg",
+    "name": "PixelFlow Studio",
+    "premium": true,
+    "rating": 5.0,
+    "projects": 120,
+    "promoted": true,
+    "status": true,
+    "hourlyRate": 8500,
+    "location": "London, UK",
+    "responsedTime": "Responds within an hour",
+    "availabServices": 15,
+    "webflowExperts": true,
+    "skills": 12,
+    "items": [
+      "Figma",
+      "Webflow",
+      "React",
+      "Brand Identity",
+      "UX Research",
+      "saas ui"
+    ],
+    "images": [
+      "https://picsum.photos/seed/ui1/400/300",
+      "https://picsum.photos/seed/ui2/400/300",
+      "https://picsum.photos/seed/ui3/400/300",
+      "https://picsum.photos/seed/ui4/400/300",
+      "https://picsum.photos/seed/ui5/400/300"
+    ]
+  },
+  {
+    "ProfileImage": "https://randomuser.me/api/portraits/women/65.jpg",
+    "name": "Sarah Designs",
+    "premium": true,
+    "rating": 4.8,
+    "projects": 45,
+    "promoted": false,
+    "status": true,
+    "hourlyRate": 5500,
+    "location": "Toronto, Canada",
+    "responsedTime": "Responds within 2 hours",
+    "availabServices": 8,
+    "webflowExperts": false,
+    "skills": 7,
+    "items": [
+      "Mobile UI",
+      "iOS Design",
+      "Android App",
+      "Prototyping",
+      "Icon Set",
+      "logo design"
+    ],
+    "images": [
+      "https://picsum.photos/seed/app1/400/300",
+      "https://picsum.photos/seed/app2/400/300",
+      "https://picsum.photos/seed/app3/400/300",
+      "https://picsum.photos/seed/app4/400/300",
+      "https://picsum.photos/seed/app5/400/300"
+    ]
+  },
+  {
+    "ProfileImage": "https://randomuser.me/api/portraits/men/22.jpg",
+    "name": "CodeVibe Agency",
+    "premium": false,
+    "rating": 4.7,
+    "projects": 95,
+    "promoted": true,
+    "status": false,
+    "hourlyRate": 9000,
+    "location": "Berlin, Germany",
+    "responsedTime": "Responds in 4 hours",
+    "availabServices": 20,
+    "webflowExperts": true,
+    "skills": 15,
+    "items": [
+      "SaaS UI",
+      "Dashboard",
+      "Tailwind CSS",
+      "landing page",
+      "web design"
+    ],
+    "images": [
+      "https://picsum.photos/seed/web1/400/300",
+      "https://picsum.photos/seed/web2/400/300",
+      "https://picsum.photos/seed/web3/400/300",
+      "https://picsum.photos/seed/web4/400/300",
+      "https://picsum.photos/seed/web5/400/300"
+    ]
+  },
+  {
+    "ProfileImage": "https://randomuser.me/api/portraits/women/12.jpg",
+    "name": "Creative Minds",
+    "premium": true,
+    "rating": 4.9,
+    "projects": 67,
+    "promoted": false,
+    "status": true,
+    "hourlyRate": 6000,
+    "location": "Dubai, UAE",
+    "responsedTime": "within a day",
+    "availabServices": 10,
+    "webflowExperts": true,
+    "skills": 9,
+    "items": [
+      "ui ux design",
+      "Logo Design",
+      "Illustration",
+      "Typography",
+      "landing page"
+    ],
+    "images": [
+      "https://picsum.photos/seed/creative1/400/300",
+      "https://picsum.photos/seed/creative2/400/300",
+      "https://picsum.photos/seed/creative3/400/300",
+      "https://picsum.photos/seed/creative4/400/300",
+      "https://picsum.photos/seed/creative5/400/300"
+    ]
+  },
+  {
+    "ProfileImage": "https://randomuser.me/api/portraits/men/88.jpg",
+    "name": "StackBuilders",
+    "premium": true,
+    "rating": 4.6,
+    "projects": 210,
+    "promoted": true,
+    "status": true,
+    "hourlyRate": 12000,
+    "location": "San Francisco, USA",
+    "responsedTime": "within 30 mins",
+    "availabServices": 25,
+    "webflowExperts": true,
+    "skills": 18,
+    "items": ["figma", "Full Stack", "E-commerce", "GSAP", "saas ui"],
+    "images": [
+      "https://picsum.photos/seed/code1/400/300",
+      "https://picsum.photos/seed/code2/400/300",
+      "https://picsum.photos/seed/code3/400/300",
+      "https://picsum.photos/seed/code4/400/300",
+      "https://picsum.photos/seed/code5/400/300"
+    ]
+  },
+  {
+    "ProfileImage": "https://randomuser.me/api/portraits/women/33.jpg",
+    "name": "Anita's UX Studio",
+    "premium": true,
+    "rating": 4.9,
+    "projects": 32,
+    "promoted": true,
+    "status": true,
+    "hourlyRate": 4500,
+    "location": "Mumbai, India",
+    "responsedTime": "within a day",
+    "availabServices": 6,
+    "webflowExperts": false,
+    "skills": 8,
+    "items": [
+      "ui ux design",
+      "User Testing",
+      "Wireframing",
+      "Persona Mapping",
+      "Redesign"
+    ],
+    "images": [
+      "https://picsum.photos/seed/ux1/400/300",
+      "https://picsum.photos/seed/ux2/400/300",
+      "https://picsum.photos/seed/ux3/400/300",
+      "https://picsum.photos/seed/ux4/400/300",
+      "https://picsum.photos/seed/ux5/400/300"
+    ]
+  }
+]

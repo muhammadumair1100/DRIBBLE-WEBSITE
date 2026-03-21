@@ -45,7 +45,7 @@ const StartProjectBrief = () => {
     "Track submissions and progress all in one place",
   ];
   return (
-    <div className="relative border-2">
+    <div className="relative">
       <Dropdown />
       <Navbar />
       {/* Hero Section  */}

@@ -1,7 +1,7 @@
 const BrowseData = [
   {
     ProfileImage: "https://randomuser.me/api/portraits/men/32.jpg",
-    name: "Web & Mobile Development",
+    name: "Musemind",
     premium: true,
     rating: 4.9,
     projects: 85,

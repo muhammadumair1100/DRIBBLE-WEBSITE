@@ -35,7 +35,7 @@ const BadgeTwo = ({ itemData, line1, line2, line3 }) => {
         <div className="mt-7 flex flex-col gap-8 min-[1200px]:gap-0">
           {(itemData || hireTalent).map((talent, index) => (
             <Link
-              to={"/" + talent.title.toLowerCase().replace(/\s+/g, "-")}
+              to={`${talent.title.toLowerCase().replace(/\s+/g, "-") === "start-project-brief" ? "/instantmatch" : talent.title.toLowerCase().replace(/\s+/g, "-") === "browse-profiles" ? "/designers" : talent.title.toLowerCase().replace(/\s+/g, "-") === "explore-services" ? "/services" : "/"} `}
               key={index}
               className="group flex gap-2 rounded-lg hover:cursor-pointer hover:bg-neutral-100 min-[1200px]:p-4"
             >

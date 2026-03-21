@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   Check,
   Star,
@@ -11,21 +12,27 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { BrowseData } from "./BrowseData";
 
 const Cards = () => {
+  const { id } = useParams();
+  console.log(id);
   const [status, setStatus] = useState(null);
   const [designer, setDesigner] = useState(null);
   const [promote, setPromote] = useState(null);
+  const [BrowseData, setBrowseData] = useState([]);
 
-  const items = [
-    "ui ux design",
-    "figma",
-    "logo",
-    "landing page",
-    "web design",
-    "saas ui",
-  ];
+  useEffect(() => {
+    async function fetchData() {
+      const data = await fetch(
+        id ? `/designers/${id}.json` : "/designers/designers.json",
+      );
+      const getData = await data.json();
+      setBrowseData(getData);
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className="mt-5 flex flex-col gap-12 overflow-hidden px-0 py-10 md:px-10">
       {/* card  */}
@@ -39,7 +46,7 @@ const Cards = () => {
             <div className="flex w-full gap-2 lg:gap-5">
               <div className="relative h-15 w-17.5 rounded-full min-[500px]:h-16">
                 <img
-                  src="https://cdn.dribbble.com/users/2959364/avatars/normal/9afda620bf04b40ab310d16dbce65a2f.png?1696939287"
+                  src={data.ProfileImage}
                   alt=""
                   className="h-full w-full rounded-full object-cover"
                 />
@@ -63,11 +70,18 @@ const Cards = () => {
                 <div className="flex flex-col gap-1 min-[500px]:flex-row md:gap-3 lg:items-center">
                   <div className="flex items-center gap-2">
                     <h1 className="text-sm font-semibold tracking-tight hover:text-neutral-500 md:text-lg">
-                      Musemind
+                      {data.name}
                     </h1>
-                    <span className="rounded-sm bg-black px-1 py-0.5 text-[9px] font-extrabold text-white uppercase">
-                      pro
-                    </span>
+                    {data.premium ? (
+                      <span className="rounded-sm bg-black px-1 py-0.5 text-[9px] font-extrabold text-white uppercase">
+                        PRO+
+                      </span>
+                    ) : (
+                      <span className="rounded-sm bg-neutral-300/50 px-1.5 py-0.5 text-[9px] font-bold text-neutral-600 uppercase">
+                        PRO
+                      </span>
+                    )}
+
                     {data.promoted && (
                       <div>
                         <div className="relative min-[500px]:hidden">
@@ -237,7 +251,8 @@ const Cards = () => {
               <ul className="flex flex-wrap gap-2">
                 {data.items.map((item, index) => (
                   <li
-                    className={`rounded-full ${index < 2 ? "block" : ""} ${index >= 2 && index < 4 ? "hidden md:block" : ""} ${index >= 4 ? "hidden xl:block" : ""} bg-neutral-200/55 px-3 py-1 text-sm whitespace-nowrap hover:bg-white`}
+                    key={index}
+                    className={`rounded-full ${index < 2 ? "block" : ""} ${index >= 2 && index < 4 ? "hidden md:block" : ""} ${index >= 4 ? "hidden xl:block" : ""} bg-gray-200/50 px-4 py-1 text-xs font-medium whitespace-nowrap text-neutral-600 hover:bg-white`}
                   >
                     {item}
                   </li>

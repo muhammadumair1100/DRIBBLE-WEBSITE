@@ -5,10 +5,10 @@ import { SearchContext } from "../../../context/SearchProvider";
 import NotFound from "./NotFound";
 
 export default function Search() {
-  const { allItems } = useContext(SearchContext);
+  const { allItems, activeItem } = useContext(SearchContext);
   const { id } = useParams();
-
-  const idName = allItems.find(
+  console.log(allItems[activeItem]);
+  const idName = allItems[activeItem].find(
     (data) => data.name.toLowerCase().replace(/\s+/g, "-") === id,
   );
 

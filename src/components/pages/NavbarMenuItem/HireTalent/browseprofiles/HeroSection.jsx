@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParams } from "react-router-dom";
 import {
   ChevronDown,
   SlidersHorizontal,
@@ -12,6 +13,7 @@ import {
 } from "lucide-react";
 
 const HeroSection = () => {
+  const { id } = useParams();
   const [scroll, setScroll] = useState(0);
   const [filter, setFilter] = useState(false);
 
@@ -45,15 +47,29 @@ const HeroSection = () => {
   ];
   const categories = ["Categories", "Budget", "Location", "Rating", "More"];
   return (
-    <div className="mt-3 px-5 md:px-10">
-      <div className="flex flex-col gap-4">
+    <div className="mt-3">
+      <div className="flex flex-col gap-4 px-5 md:px-10">
         <div>
-          <h1 className="text-lg font-bold md:text-2xl">
-            Hire Top Designers on Dribbble
-          </h1>
-          <p className="mt-1 text-xs font-normal text-neutral-600">
-            Find creative professionals ready to work on your next project.
-          </p>
+          {id ? (
+            <h1 className="text-lg md:text-2xl">
+              Result for{" "}
+              <span className="font-bold"> {id.replace("-", " ")}</span>
+            </h1>
+          ) : (
+            <h1 className="text-lg font-bold md:text-2xl">
+              Hire Top Designers on Dribbble
+            </h1>
+          )}
+
+          {id ? (
+            <p className="mt-1 text-xs font-normal text-neutral-600">
+              Hire top designers for {id.replace("-", " ")} projects.
+            </p>
+          ) : (
+            <p className="mt-1 text-xs font-normal text-neutral-600">
+              Find creative professionals ready to work on your next project.
+            </p>
+          )}
         </div>
         <div className="relative">
           <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-5 bg-linear-to-r from-white to-transparent lg:hidden" />
@@ -85,7 +101,7 @@ const HeroSection = () => {
         <div className="w-full border border-neutral-100"></div>
       </div>
       <div
-        className={`${scroll > 400 ? "fixed top-15 z-100 pb-3 lg:top-26" : "relative"} w-full bg-white transition-all duration-200`}
+        className={`${scroll > 400 ? "fixed top-15 z-50 pb-3 lg:top-26" : "relative"} w-full bg-white px-5 transition-all duration-200 md:px-10`}
       >
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-5 bg-linear-to-r from-white to-transparent sm:hidden" />
         <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-5 bg-linear-to-l from-white to-transparent sm:hidden" />
@@ -106,8 +122,11 @@ const HeroSection = () => {
             <SlidersHorizontal size={14} />
           </div>
           <ul className="flex gap-3">
-            {categories.map((category) => (
-              <li className="flex items-center gap-1 rounded-md border border-neutral-300 px-4 py-2 text-xs font-medium hover:cursor-pointer hover:border-neutral-400">
+            {categories.map((category, index) => (
+              <li
+                key={index}
+                className="flex items-center gap-1 rounded-md border border-neutral-300 px-4 py-2 text-xs font-medium hover:cursor-pointer hover:border-neutral-400"
+              >
                 {category}
                 <span className="pt-px">
                   {<ChevronDown size={15} strokeWidth={2} />}
@@ -118,10 +137,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <Banner />
-      <AnimatePresence>
-        {filter && <Filter filter={setFilter} />}
-      </AnimatePresence>
+      <div className="px-5 md:px-10">
+        <Banner />
+        <AnimatePresence>
+          {filter && <Filter filter={setFilter} />}
+        </AnimatePresence>
+      </div>
     </div>
   );
 };
@@ -130,7 +151,7 @@ export default HeroSection;
 
 const Banner = () => {
   return (
-    <div className="mt-5 flex w-full flex-col gap-3 rounded-xl bg-blue-50/80 px-4 py-9 hover:cursor-pointer md:flex-row md:gap-6">
+    <div className="mt-5 flex w-full flex-col gap-3 rounded-xl bg-blue-50/80 px-5 py-9 hover:cursor-pointer md:flex-row md:gap-6">
       <motion.div
         animate={{
           borderColor: ["#0471A6", "#89AAE6", "#63A375", "#2CDA9D"],
@@ -224,7 +245,7 @@ const Filter = ({ filter }) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       exit={{ y: 10, opacity: 0 }}
-      className="fixed top-1/2 left-1/2 z-[100] h-[95vh] w-[450px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-white shadow-2xl"
+      className="fixed top-1/2 left-1/2 z-100 h-[95vh] w-[450px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-white shadow-2xl"
     >
       {/* Header */}
       <div className="relative border-b border-neutral-200 bg-white py-5">
@@ -348,9 +369,9 @@ const Filter = ({ filter }) => {
         <div className="flex flex-col gap-3 border-b border-neutral-200 px-10 pb-6">
           <h1 className="text-sm font-bold">Rating</h1>
           <div className="5 flex flex-col gap-4">
-            {ratings.map((rate) => (
+            {ratings.map((rate, index) => (
               <label
-                key={rate}
+                key={index}
                 className="group flex cursor-pointer items-center gap-3"
                 onClick={() => setSelectedRating(rate)}
               >

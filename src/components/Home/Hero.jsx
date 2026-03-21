@@ -218,7 +218,7 @@ const Hero = () => {
               {inputClick && (
                 <div
                   onClick={() => setInputClick(false)}
-                  className="fixed inset-0 z-95 bg-transparent"
+                  className="fixed inset-0 z-100 bg-transparent"
                 ></div>
               )}
               {inputClick && <SearchInput value={searchInputItem} />}
@@ -232,7 +232,7 @@ const Hero = () => {
                       activeItem === "Shots"
                         ? `/search/${Item.toLowerCase().replace(/\s+/g, "-")}`
                         : activeItem === "Designers"
-                          ? "/Designers"
+                          ? `/designers/${Item.toLowerCase().replace(/\s+/g, "-")}`
                           : activeItem === "Services"
                             ? "/Services"
                             : "/Shots"
