@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link, Links } from "react-router-dom";
 import { NotebookText, Check } from "lucide-react";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "../Dropdown/Dropdown.jsx";
 
 const Navbar = () => {
   return (
