@@ -7,13 +7,15 @@ import Home from "./components/Home/Home";
 import Signup from "./components/pages/SignupLogin/Signup";
 import Shots from "./components/Home/Shots";
 
-// HireTalent Pages
-import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/StartProjectBrief/StartProjectBriefs.jsx";
-import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/BrowseProfiles/BrowseProfile.jsx";
 import SelectedCard from "./components/pages/HomeCards/SelectedCard";
 import ForDesigners from "./components/pages/FooterPagess/ForDesigners/ForDesigners";
 import Services from "./components/pages/HeroSection/Search";
 import SearchProvider from "./context/SearchProvider";
+
+// HireTalent Pages
+import StartProjectBrief from "./components/pages/NavbarMenuItem/HireTalent/StartProjectBrief/StartProjectBriefs.jsx";
+import BrowseProfiles from "./components/pages/NavbarMenuItem/HireTalent/BrowseProfiles/BrowseProfile.jsx";
+import ExploreServices from "./components/pages/NavbarMenuItem/HireTalent/ExploreService/ExploreServices.jsx";
 
 const App = () => {
   return (
@@ -36,6 +38,7 @@ const App = () => {
             {/* Navbar HireTalent ItemsPages */}
             <Route path="/instantmatch" element={<StartProjectBrief />} />
             <Route path="/designers" element={<BrowseProfiles />} />
+            <Route path="/services" element={<ExploreServices />} />
 
             {/* Footer Pages  */}
             <Route path="/for-designers" element={<ForDesigners />} />
