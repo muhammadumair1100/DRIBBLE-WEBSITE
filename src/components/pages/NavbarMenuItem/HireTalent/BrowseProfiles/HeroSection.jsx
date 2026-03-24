@@ -12,7 +12,7 @@ import {
   CircleAlert,
 } from "lucide-react";
 
-const HeroSection = () => {
+const HeroSection = ({ propData }) => {
   const { id } = useParams();
   const [scroll, setScroll] = useState(0);
   const [filter, setFilter] = useState(false);
@@ -57,7 +57,7 @@ const HeroSection = () => {
             </h1>
           ) : (
             <h1 className="text-lg font-bold md:text-2xl">
-              Hire Top Designers on Dribbble
+              {propData?.heading || "Hire Top Designers on Dribbble"}
             </h1>
           )}
 
@@ -67,7 +67,9 @@ const HeroSection = () => {
             </p>
           ) : (
             <p className="mt-1 text-xs font-normal text-neutral-600">
-              Find creative professionals ready to work on your next project.
+              {propData
+                ? "Hire designers offering design services for your next project"
+                : "Find creative professionals ready to work on your next project."}
             </p>
           )}
         </div>
@@ -86,7 +88,7 @@ const HeroSection = () => {
           >
             <p className="text-xs">Popular:</p>
             <ul className="flex flex-1 gap-2">
-              {items.map((item, index) => (
+              {(propData ? propData.items : items).map((item, index) => (
                 <li
                   key={index}
                   className="rounded-full border border-neutral-300 px-2 py-1.5 text-xs whitespace-nowrap hover:cursor-pointer hover:text-neutral-600"
@@ -122,7 +124,7 @@ const HeroSection = () => {
             <SlidersHorizontal size={14} />
           </div>
           <ul className="flex gap-3">
-            {categories.map((category, index) => (
+            {(propData?.categories || categories).map((category, index) => (
               <li
                 key={index}
                 className="flex items-center gap-1 rounded-md border border-neutral-300 px-4 py-2 text-xs font-medium hover:cursor-pointer hover:border-neutral-400"
@@ -138,9 +140,9 @@ const HeroSection = () => {
       </div>
 
       <div className="px-5 md:px-10">
-        <Banner />
+        {propData ? "" : <Banner />}
         <AnimatePresence>
-          {filter && <Filter filter={setFilter} />}
+          {filter && <Filter filter={setFilter} propData={propData} />}
         </AnimatePresence>
       </div>
     </div>
@@ -190,7 +192,8 @@ const Banner = () => {
   );
 };
 
-const Filter = ({ filter }) => {
+const Filter = ({ filter, propData }) => {
+  console.log(propData);
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(10000);
   const [location, setLocation] = useState("");

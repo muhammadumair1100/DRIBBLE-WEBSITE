@@ -15,7 +15,7 @@ import {
 
 const Cards = () => {
   const { id } = useParams();
-  console.log(id);
+
   const [status, setStatus] = useState(null);
   const [designer, setDesigner] = useState(null);
   const [promote, setPromote] = useState(null);

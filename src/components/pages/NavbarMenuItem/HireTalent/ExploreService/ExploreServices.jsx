@@ -1,5 +1,37 @@
 import React from "react";
+import HeroSection from "../BrowseProfiles/HeroSection";
+import Navbar from "../../../../Home/Navbar";
 
 export default function ExploreServices() {
-  return <div>love</div>;
+  const propData = {
+    heading: "Explore Services",
+    headingPara:
+      "Hire designers offering design services for your next project.",
+    items: [
+      "landing page",
+      "logo desing",
+      "mobile app",
+      "web design",
+      "development",
+      "branding",
+      "social media",
+      "ecommerce",
+      "illustration",
+      "animation",
+    ],
+    categories: [
+      "Categories",
+      "Tags",
+      "Price",
+      "Delivery Time",
+      "Designer Filter",
+    ],
+  };
+  return (
+    <>
+      <Navbar />
+      <div className="pt-20"></div>
+      <HeroSection propData={propData} />
+    </>
+  );
 }
