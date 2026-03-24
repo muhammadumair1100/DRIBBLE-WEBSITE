@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "profileImage": "https://randomuser.me/api/portraits/women/31.jpg",
+    "name": "ClearVision Studio",
+    "title": "Contact Lens Advisor",
+    "plan": true,
+    "price": 1500,
+    "images": [
+      "https://picsum.photos/seed/eye-exam-1/400/300",
+      "https://picsum.photos/seed/eye-exam-2/400/300",
+      "https://picsum.photos/seed/eye-exam-3/400/300",
+      "https://picsum.photos/seed/eye-exam-4/400/300",
+      "https://picsum.photos/seed/eye-exam-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 2,
+    "profileImage": "https://randomuser.me/api/portraits/men/30.jpg",
+    "name": "Optic Nova Lab",
+    "title": "Glaucoma Consultant",
+    "plan": true,
+    "price": 2000,
+    "images": [
+      "https://picsum.photos/seed/eye-care-1/400/300",
+      "https://picsum.photos/seed/eye-care-2/400/300",
+      "https://picsum.photos/seed/eye-care-3/400/300",
+      "https://picsum.photos/seed/eye-care-4/400/300",
+      "https://picsum.photos/seed/eye-care-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 3,
+    "profileImage": "https://randomuser.me/api/portraits/women/28.jpg",
+    "name": "EyeCraft Works",
+    "title": "Cornea Specialist",
+    "plan": false,
+    "price": 2500,
+    "images": [
+      "https://picsum.photos/seed/ophthalmology-1/400/300",
+      "https://picsum.photos/seed/ophthalmology-2/400/300",
+      "https://picsum.photos/seed/ophthalmology-3/400/300",
+      "https://picsum.photos/seed/ophthalmology-4/400/300",
+      "https://picsum.photos/seed/ophthalmology-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 4,
+    "profileImage": "https://randomuser.me/api/portraits/men/4.jpg",
+    "name": "VisionForge Hub",
+    "title": "Retina Care Expert",
+    "plan": true,
+    "price": 3000,
+    "images": [
+      "https://picsum.photos/seed/vision-test-1/400/300",
+      "https://picsum.photos/seed/vision-test-2/400/300",
+      "https://picsum.photos/seed/vision-test-3/400/300",
+      "https://picsum.photos/seed/vision-test-4/400/300",
+      "https://picsum.photos/seed/vision-test-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 5,
+    "profileImage": "https://randomuser.me/api/portraits/men/26.jpg",
+    "name": "RetinaBloom Co",
+    "title": "Pediatric Eye Specialist",
+    "plan": true,
+    "price": 3500,
+    "images": [
+      "https://picsum.photos/seed/eye-drop-1/400/300",
+      "https://picsum.photos/seed/eye-drop-2/400/300",
+      "https://picsum.photos/seed/eye-drop-3/400/300",
+      "https://picsum.photos/seed/eye-drop-4/400/300",
+      "https://picsum.photos/seed/eye-drop-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 6,
+    "profileImage": "https://randomuser.me/api/portraits/women/11.jpg",
+    "name": "OpticPulse Agency",
+    "title": "Eye Care Specialist",
+    "plan": true,
+    "price": 4000,
+    "images": [
+      "https://picsum.photos/seed/contact-lens-1/400/300",
+      "https://picsum.photos/seed/contact-lens-2/400/300",
+      "https://picsum.photos/seed/contact-lens-3/400/300",
+      "https://picsum.photos/seed/contact-lens-4/400/300",
+      "https://picsum.photos/seed/contact-lens-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 7,
+    "profileImage": "https://randomuser.me/api/portraits/women/16.jpg",
+    "name": "LensFlare Creative",
+    "title": "Ophthalmology Expert",
+    "plan": true,
+    "price": 4500,
+    "images": [
+      "https://picsum.photos/seed/eye-surgery-1/400/300",
+      "https://picsum.photos/seed/eye-surgery-2/400/300",
+      "https://picsum.photos/seed/eye-surgery-3/400/300",
+      "https://picsum.photos/seed/eye-surgery-4/400/300",
+      "https://picsum.photos/seed/eye-surgery-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 8,
+    "profileImage": "https://randomuser.me/api/portraits/men/24.jpg",
+    "name": "CorneaFlow Design",
+    "title": "Pediatric Eye Specialist",
+    "plan": true,
+    "price": 5000,
+    "images": [
+      "https://picsum.photos/seed/retina-scan-1/400/300",
+      "https://picsum.photos/seed/retina-scan-2/400/300",
+      "https://picsum.photos/seed/retina-scan-3/400/300",
+      "https://picsum.photos/seed/retina-scan-4/400/300",
+      "https://picsum.photos/seed/retina-scan-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 9,
+    "profileImage": "https://randomuser.me/api/portraits/women/23.jpg",
+    "name": "IrisEdge Studio",
+    "title": "Contact Lens Advisor",
+    "plan": true,
+    "price": 5500,
+    "images": [
+      "https://picsum.photos/seed/eye-clinic-1/400/300",
+      "https://picsum.photos/seed/eye-clinic-2/400/300",
+      "https://picsum.photos/seed/eye-clinic-3/400/300",
+      "https://picsum.photos/seed/eye-clinic-4/400/300",
+      "https://picsum.photos/seed/eye-clinic-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 10,
+    "profileImage": "https://randomuser.me/api/portraits/women/14.jpg",
+    "name": "PupilArc Lab",
+    "title": "Ophthalmology Expert",
+    "plan": true,
+    "price": 6000,
+    "images": [
+      "https://picsum.photos/seed/glasses-fitting-1/400/300",
+      "https://picsum.photos/seed/glasses-fitting-2/400/300",
+      "https://picsum.photos/seed/glasses-fitting-3/400/300",
+      "https://picsum.photos/seed/glasses-fitting-4/400/300",
+      "https://picsum.photos/seed/glasses-fitting-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 11,
+    "profileImage": "https://randomuser.me/api/portraits/women/22.jpg",
+    "name": "GazeNexus Works",
+    "title": "Vision Designer",
+    "plan": false,
+    "price": 6500,
+    "images": [
+      "https://picsum.photos/seed/laser-eye-1/400/300",
+      "https://picsum.photos/seed/laser-eye-2/400/300",
+      "https://picsum.photos/seed/laser-eye-3/400/300",
+      "https://picsum.photos/seed/laser-eye-4/400/300",
+      "https://picsum.photos/seed/laser-eye-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 12,
+    "profileImage": "https://randomuser.me/api/portraits/women/2.jpg",
+    "name": "FocusApex Hub",
+    "title": "Dry Eye Expert",
+    "plan": false,
+    "price": 7000,
+    "images": [
+      "https://picsum.photos/seed/cornea-1/400/300",
+      "https://picsum.photos/seed/cornea-2/400/300",
+      "https://picsum.photos/seed/cornea-3/400/300",
+      "https://picsum.photos/seed/cornea-4/400/300",
+      "https://picsum.photos/seed/cornea-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 13,
+    "profileImage": "https://randomuser.me/api/portraits/women/38.jpg",
+    "name": "SightPrime Co",
+    "title": "Eye Treatment Consultant",
+    "plan": true,
+    "price": 7500,
+    "images": [
+      "https://picsum.photos/seed/pupil-dilation-1/400/300",
+      "https://picsum.photos/seed/pupil-dilation-2/400/300",
+      "https://picsum.photos/seed/pupil-dilation-3/400/300",
+      "https://picsum.photos/seed/pupil-dilation-4/400/300",
+      "https://picsum.photos/seed/pupil-dilation-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 14,
+    "profileImage": "https://randomuser.me/api/portraits/women/20.jpg",
+    "name": "VisionZen Agency",
+    "title": "Contact Lens Advisor",
+    "plan": true,
+    "price": 8000,
+    "images": [
+      "https://picsum.photos/seed/eye-drops-1/400/300",
+      "https://picsum.photos/seed/eye-drops-2/400/300",
+      "https://picsum.photos/seed/eye-drops-3/400/300",
+      "https://picsum.photos/seed/eye-drops-4/400/300",
+      "https://picsum.photos/seed/eye-drops-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 15,
+    "profileImage": "https://randomuser.me/api/portraits/women/29.jpg",
+    "name": "OpticHalo Creative",
+    "title": "Optical Design Pro",
+    "plan": false,
+    "price": 8500,
+    "images": [
+      "https://picsum.photos/seed/slit-lamp-1/400/300",
+      "https://picsum.photos/seed/slit-lamp-2/400/300",
+      "https://picsum.photos/seed/slit-lamp-3/400/300",
+      "https://picsum.photos/seed/slit-lamp-4/400/300",
+      "https://picsum.photos/seed/slit-lamp-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 16,
+    "profileImage": "https://randomuser.me/api/portraits/men/37.jpg",
+    "name": "EyeLuma Design",
+    "title": "LASIK Specialist",
+    "plan": false,
+    "price": 9000,
+    "images": [
+      "https://picsum.photos/seed/fundus-photo-1/400/300",
+      "https://picsum.photos/seed/fundus-photo-2/400/300",
+      "https://picsum.photos/seed/fundus-photo-3/400/300",
+      "https://picsum.photos/seed/fundus-photo-4/400/300",
+      "https://picsum.photos/seed/fundus-photo-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 17,
+    "profileImage": "https://randomuser.me/api/portraits/women/10.jpg",
+    "name": "RetinaWave Studio",
+    "title": "LASIK Specialist",
+    "plan": false,
+    "price": 9500,
+    "images": [
+      "https://picsum.photos/seed/visual-field-1/400/300",
+      "https://picsum.photos/seed/visual-field-2/400/300",
+      "https://picsum.photos/seed/visual-field-3/400/300",
+      "https://picsum.photos/seed/visual-field-4/400/300",
+      "https://picsum.photos/seed/visual-field-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 18,
+    "profileImage": "https://randomuser.me/api/portraits/women/4.jpg",
+    "name": "PupilMint Lab",
+    "title": "Ocular Health Pro",
+    "plan": true,
+    "price": 10000,
+    "images": [
+      "https://picsum.photos/seed/eye-chart-1/400/300",
+      "https://picsum.photos/seed/eye-chart-2/400/300",
+      "https://picsum.photos/seed/eye-chart-3/400/300",
+      "https://picsum.photos/seed/eye-chart-4/400/300",
+      "https://picsum.photos/seed/eye-chart-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 19,
+    "profileImage": "https://randomuser.me/api/portraits/men/5.jpg",
+    "name": "GazeSpark Works",
+    "title": "Contact Lens Advisor",
+    "plan": false,
+    "price": 11000,
+    "images": [
+      "https://picsum.photos/seed/optical-coherence-1/400/300",
+      "https://picsum.photos/seed/optical-coherence-2/400/300",
+      "https://picsum.photos/seed/optical-coherence-3/400/300",
+      "https://picsum.photos/seed/optical-coherence-4/400/300",
+      "https://picsum.photos/seed/optical-coherence-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 20,
+    "profileImage": "https://randomuser.me/api/portraits/men/20.jpg",
+    "name": "LensGrid Hub",
+    "title": "Contact Lens Advisor",
+    "plan": false,
+    "price": 12000,
+    "images": [
+      "https://picsum.photos/seed/eye-pressure-1/400/300",
+      "https://picsum.photos/seed/eye-pressure-2/400/300",
+      "https://picsum.photos/seed/eye-pressure-3/400/300",
+      "https://picsum.photos/seed/eye-pressure-4/400/300",
+      "https://picsum.photos/seed/eye-pressure-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 21,
+    "profileImage": "https://randomuser.me/api/portraits/men/10.jpg",
+    "name": "CorneaNeon Co",
+    "title": "Optical Design Pro",
+    "plan": true,
+    "price": 13000,
+    "images": [
+      "https://picsum.photos/seed/macular-1/400/300",
+      "https://picsum.photos/seed/macular-2/400/300",
+      "https://picsum.photos/seed/macular-3/400/300",
+      "https://picsum.photos/seed/macular-4/400/300",
+      "https://picsum.photos/seed/macular-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 22,
+    "profileImage": "https://randomuser.me/api/portraits/men/13.jpg",
+    "name": "IrisDusk Agency",
+    "title": "Visual Therapy Expert",
+    "plan": false,
+    "price": 14000,
+    "images": [
+      "https://picsum.photos/seed/glaucoma-test-1/400/300",
+      "https://picsum.photos/seed/glaucoma-test-2/400/300",
+      "https://picsum.photos/seed/glaucoma-test-3/400/300",
+      "https://picsum.photos/seed/glaucoma-test-4/400/300",
+      "https://picsum.photos/seed/glaucoma-test-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 23,
+    "profileImage": "https://randomuser.me/api/portraits/men/27.jpg",
+    "name": "VisionBold Creative",
+    "title": "Ophthalmology Expert",
+    "plan": false,
+    "price": 15000,
+    "images": [
+      "https://picsum.photos/seed/eye-ultrasound-1/400/300",
+      "https://picsum.photos/seed/eye-ultrasound-2/400/300",
+      "https://picsum.photos/seed/eye-ultrasound-3/400/300",
+      "https://picsum.photos/seed/eye-ultrasound-4/400/300",
+      "https://picsum.photos/seed/eye-ultrasound-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 24,
+    "profileImage": "https://randomuser.me/api/portraits/women/1.jpg",
+    "name": "SightPeak Design",
+    "title": "Optical Design Pro",
+    "plan": true,
+    "price": 18000,
+    "images": [
+      "https://picsum.photos/seed/iris-scan-1/400/300",
+      "https://picsum.photos/seed/iris-scan-2/400/300",
+      "https://picsum.photos/seed/iris-scan-3/400/300",
+      "https://picsum.photos/seed/iris-scan-4/400/300",
+      "https://picsum.photos/seed/iris-scan-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 25,
+    "profileImage": "https://randomuser.me/api/portraits/men/32.jpg",
+    "name": "OpticZest Studio",
+    "title": "Contact Lens Advisor",
+    "plan": true,
+    "price": 20000,
+    "images": [
+      "https://picsum.photos/seed/eye-prosthetic-1/400/300",
+      "https://picsum.photos/seed/eye-prosthetic-2/400/300",
+      "https://picsum.photos/seed/eye-prosthetic-3/400/300",
+      "https://picsum.photos/seed/eye-prosthetic-4/400/300",
+      "https://picsum.photos/seed/eye-prosthetic-5/400/300"
+    ],
+    "quickHire": true
+  },
+  {
+    "id": 26,
+    "profileImage": "https://randomuser.me/api/portraits/women/17.jpg",
+    "name": "EyeSlate Lab",
+    "title": "Eye Care Specialist",
+    "plan": false,
+    "price": 22000,
+    "images": [
+      "https://picsum.photos/seed/dry-eye-1/400/300",
+      "https://picsum.photos/seed/dry-eye-2/400/300",
+      "https://picsum.photos/seed/dry-eye-3/400/300",
+      "https://picsum.photos/seed/dry-eye-4/400/300",
+      "https://picsum.photos/seed/dry-eye-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 27,
+    "profileImage": "https://randomuser.me/api/portraits/men/45.jpg",
+    "name": "FocusVibe Works",
+    "title": "Glaucoma Consultant",
+    "plan": false,
+    "price": 25000,
+    "images": [
+      "https://picsum.photos/seed/eye-allergy-1/400/300",
+      "https://picsum.photos/seed/eye-allergy-2/400/300",
+      "https://picsum.photos/seed/eye-allergy-3/400/300",
+      "https://picsum.photos/seed/eye-allergy-4/400/300",
+      "https://picsum.photos/seed/eye-allergy-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 28,
+    "profileImage": "https://randomuser.me/api/portraits/men/22.jpg",
+    "name": "GazeFlux Hub",
+    "title": "Ophthalmology Expert",
+    "plan": true,
+    "price": 28000,
+    "images": [
+      "https://picsum.photos/seed/pediatric-eye-1/400/300",
+      "https://picsum.photos/seed/pediatric-eye-2/400/300",
+      "https://picsum.photos/seed/pediatric-eye-3/400/300",
+      "https://picsum.photos/seed/pediatric-eye-4/400/300",
+      "https://picsum.photos/seed/pediatric-eye-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 29,
+    "profileImage": "https://randomuser.me/api/portraits/men/17.jpg",
+    "name": "LensBloom Co",
+    "title": "Eye Wellness Coach",
+    "plan": true,
+    "price": 30000,
+    "images": [
+      "https://picsum.photos/seed/diabetic-retina-1/400/300",
+      "https://picsum.photos/seed/diabetic-retina-2/400/300",
+      "https://picsum.photos/seed/diabetic-retina-3/400/300",
+      "https://picsum.photos/seed/diabetic-retina-4/400/300",
+      "https://picsum.photos/seed/diabetic-retina-5/400/300"
+    ],
+    "quickHire": false
+  },
+  {
+    "id": 30,
+    "profileImage": "https://randomuser.me/api/portraits/men/12.jpg",
+    "name": "VisionEcho Agency",
+    "title": "Contact Lens Advisor",
+    "plan": false,
+    "price": 35000,
+    "images": [
+      "https://picsum.photos/seed/cataract-1/400/300",
+      "https://picsum.photos/seed/cataract-2/400/300",
+      "https://picsum.photos/seed/cataract-3/400/300",
+      "https://picsum.photos/seed/cataract-4/400/300",
+      "https://picsum.photos/seed/cataract-5/400/300"
+    ],
+    "quickHire": false
+  }
+]

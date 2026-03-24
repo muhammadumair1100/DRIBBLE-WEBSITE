@@ -127,7 +127,7 @@ const HeroSection = ({ propData }) => {
             {(propData?.categories || categories).map((category, index) => (
               <li
                 key={index}
-                className="flex items-center gap-1 rounded-md border border-neutral-300 px-4 py-2 text-xs font-medium hover:cursor-pointer hover:border-neutral-400"
+                className="flex items-center gap-1 rounded-md border border-neutral-300 px-4 py-2 text-xs font-medium whitespace-nowrap hover:cursor-pointer hover:border-neutral-400"
               >
                 {category}
                 <span className="pt-px">
@@ -142,7 +142,15 @@ const HeroSection = ({ propData }) => {
       <div className="px-5 md:px-10">
         {propData ? "" : <Banner />}
         <AnimatePresence>
-          {filter && <Filter filter={setFilter} propData={propData} />}
+          {filter && (
+            <>
+              <div
+                onClick={() => setFilter(false)}
+                className="fixed inset-0 z-100 bg-black/50"
+              ></div>
+              <Filter filter={setFilter} propData={propData} />
+            </>
+          )}
         </AnimatePresence>
       </div>
     </div>
@@ -269,7 +277,7 @@ const Filter = ({ filter, propData }) => {
         <div className="mt-5 border-b border-neutral-200 px-10 pb-6">
           <h1 className="text-sm font-bold">Categories</h1>
           <ul className="mt-4 grid grid-cols-2 gap-2 text-center">
-            {categories.map((category, index) => (
+            {(propData?.fCategories || categories).map((category, index) => (
               <li
                 key={index}
                 className="cursor-pointer rounded-full border border-neutral-200 py-2 text-xs transition-all hover:bg-black hover:text-white"
