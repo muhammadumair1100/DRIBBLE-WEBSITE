@@ -1,8 +1,11 @@
-import { Zap } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight, Zap } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function CardSection() {
   const [cardData, setCardData] = useState([]);
+  const [showArrow, setShowArrow] = useState(null);
+  const [currentImg, setCurrentImg] = useState({});
 
   useEffect(() => {
     try {
@@ -17,19 +20,70 @@ export default function CardSection() {
     }
   }, []);
 
+  function leftArrow(id, len) {
+    if (currentImg[id]) {
+      setNextPic({ ...currentImg, [id]: currentImg[id] - 1 });
+    } else {
+      setNextPic({ ...currentImg, [id]: len - 1 });
+    }
+  }
+
+  function rightArrow(id, len) {
+    if (currentImg[id]) {
+      if (currentImg[id] === len - 1)
+        return setNextPic({ ...currentImg, [id]: 0 });
+      setNextPic({ ...currentImg, [id]: currentImg[id] + 1 });
+    } else {
+      setNextPic({ ...currentImg, [id]: 1 });
+    }
+  }
+
   return (
     <div className="grid gap-5 px-5 pt-10 md:grid-cols-2 md:gap-y-10 md:px-10 lg:grid-cols-3">
-      {cardData.map((data, idx) => (
+      {cardData.map((data, index) => (
         <div
-          key={idx}
+          key={data.id}
           className="group flex flex-col gap-2 hover:cursor-pointer"
         >
-          <div>
+          <div
+            onMouseEnter={() => setShowArrow(index)}
+            onMouseLeave={() => setShowArrow(null)}
+            className="relative"
+          >
             <img
               className="h-full w-full rounded-lg"
-              src={data.images[1]}
+              src={data.images.at(currentImg[data.id])}
               alt={data.title}
             />
+            <AnimatePresence>
+              {showArrow === index && (
+                <motion.div
+                  onClick={() => leftArrow(data.id, data.images.length)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  exit={{ duration: 0.2, opacity: 0 }}
+                  className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-white p-1 shadow-[0_0_15px_5px_rgba(0,0,0,0.2)] hover:text-pink-500"
+                >
+                  <ChevronLeft size={16} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+              {showArrow === index && (
+                <motion.div
+                  onClick={() => rightArrow(data.id, data.images.length)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  exit={{ duration: 0.2, opacity: 0 }}
+                  className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-white p-1 shadow-[0_0_15px_5px_rgba(0,0,0,0.2)] hover:text-pink-500"
+                >
+                  <ChevronRight size={16} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
           <div className="flex flex-col gap-2">
             <h1 className="font-bold group-hover:text-black/60">
